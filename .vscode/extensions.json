@@ -1,0 +1,20 @@
+{
+	"recommendations": [
+        "ms-azuretools.vscode-docker",
+        "docker.docker",
+		"EditorConfig.EditorConfig",
+        "wholroyd.jinja",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "ms-python.vscode-python-envs",
+        "charliermarsh.ruff",
+        "shardulm94.trailing-spaces",
+        "ms-vscode-remote.remote-wsl",
+        "redhat.vscode-yaml"
+	],
+	"unwantedRecommendations": [
+        "ms-edgedevtools.vscode-edge-devtools",
+        "mtxr.sqltools"
+	]
+}

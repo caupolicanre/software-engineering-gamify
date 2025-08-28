@@ -1,0 +1,19 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v5
+
+    - name: Set up Python environment
+      uses: ./.github/actions/setup-python-env
+
+    - name: Run pre-commit
+      uses: pre-commit/action@v3.0.1

@@ -1,0 +1,51 @@
+site_name: Gamify
+repo_url: https://github.com/caupolicanre/gamify
+site_url: https://caupolicanre.github.io/gamify
+site_description: Gamify es una aplicación web y móvil diseñada para ayudar a las personas a organizar sus tareas diarias de manera motivadora.
+site_author: Caupolicán Ré - Felipe Carrozzo
+edit_uri: edit/main/docs/
+repo_name: caupolicanre/gamify
+copyright: Maintained by Caupolicán Ré - Felipe Carrozzo.
+
+nav:
+  - Home: index.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [
+            "gamify"
+            ]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/caupolicanre/gamify
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
