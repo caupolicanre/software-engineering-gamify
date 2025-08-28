@@ -39,7 +39,7 @@ Este módulo centraliza el **inventario de activos (Configuration Items, CIs)** 
 ---
 
 ## Información Adicional
-- **Tamaño total:** *Pendiente de cálculo*
+- **Tamaño total:** 552 KB
 - **Formatos de archivo:** `.drawio`, `.xlsx`, `.docx`
 
 ---
