@@ -1,6 +1,6 @@
 # Gamify - Sistema de Gestión de Tareas Gamificado
 
-![Logo del proyecto](resources/images/logo.png)
+<!-- ![Logo del proyecto](resources/images/logo.png) -->
 
 
 ## Descripción
