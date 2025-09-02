@@ -64,6 +64,7 @@ extend-select = [
     "C4",       # Comprehensions
     "DTZ",      # DateTime Zone
     "T10",      # Debugger
+    "DJ",       # Django
     "EM",       # Error Messages
     "FIX",      # Fix Me
     "INT",      # gettext
