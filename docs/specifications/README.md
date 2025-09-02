@@ -6,5 +6,5 @@ Este módulo contiene documentación técnica detallada sobre:
 - **Reglas de negocio:** Restricciones y criterios definidos.
 - **Especificaciones técnicas:** Definiciones complementarias para el desarrollo.
 
-## Archivos existentes
+<!-- ## Archivos existentes -->
 <!-- - [Casos de Uso Detallados](./Casos_Uso_Detallados.md) -->
