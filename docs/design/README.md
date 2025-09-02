@@ -2,11 +2,10 @@
 
 Este módulo contiene todos los **artefactos de diseño** del sistema, incluyendo diagramas, prototipos y documentación visual.
 
-## Subsecciones
+## Diagrams
+Sección dedicada a los diagramas del sistema.
 
-- **Diagrama de contexto:** Representación de las interacciones externas con el sistema.
-- **Diagrama de dominio:** Estructura conceptual de los elementos principales del sistema.
-
-## Archivos existentes
-<!-- - [Diagrama de Contexto](./Diagrama_Contexto.drawio)
-- [Diagrama de Dominio](./Diagrama_Dominio.drawio) -->
+### Archivos existentes
+- [**Diagrama de contexto**](./diagrams/diagrama_contexto.png)**:** Representación de las interacciones externas con el sistema.
+- [**Diagrama de dominio**](./diagrams/diagrama_dominio.png)**:** Estructura conceptual de los elementos principales del sistema.
+- [**Diagrama de casos de uso**](./diagrams/diagrama_casos_uso.png)**:** Visualización de las funcionalidades del sistema desde la perspectiva del usuario.
