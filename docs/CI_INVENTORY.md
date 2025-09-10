@@ -19,7 +19,7 @@ Este módulo centraliza el **inventario de activos (Configuration Items, CIs)** 
 | **CI-003** | [Diagrama de casos de uso](./design/diagrams/diagrama_casos_uso.drawio) | `.drawio` | Diseño | 1.0.0 | [`/docs/design/diagrams`](./design/diagrams/) | [@felipecarrozzo](https://github.com/felipecarrozzo) | **Media** | Describe las entidades principales del negocio y sus relaciones. | 2025-08-28 |
 | **CI-004** | [Casos de uso](./requirements/casos_uso.xlsx) | `.xlsx` | Documentación | 1.0.0 | [`/docs/requirements`](./requirements/) | [@felipecarrozzo](https://github.com/felipecarrozzo) | **Media** | Define el alcance funcional del sistema. | 2025-08-28 |
 | **CI-005** | [Atributos de calidad](./requirements/atributos_calidad.xlsx) | `.xlsx` | Documentación | 1.0.0 | [`/docs/requirements`](./requirements/) | [@felipecarrozzo](https://github.com/felipecarrozzo) | **Alta** | Documento de soporte al diseño y validación de la arquitectura. | 2025-08-28 |
-| **CI-006** | Documento de desarrollo de contenidos | `.docx` | Documentación | 1.0.0 | - | [@caupolicanre](https://github.com/caupolicanre) | **Baja** | Permite rastrear recursos auxiliares del proyecto. | 2025-08-28 |
+| **CI-006** | [Documentación de desarrollo de contenidos](./specifications/Carrozzo_Ré_TP_final_IS_1.docx) | `.docx` | Documentación | 1.0.0 | - | [@caupolicanre](https://github.com/caupolicanre) | **Baja** | Permite rastrear recursos auxiliares del proyecto. | 2025-08-28 |
 
 ---
 
