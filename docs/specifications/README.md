@@ -2,4 +2,4 @@
 
 Este módulo contiene:
 
-- **Documentación:** Descripcion detallada de los items trabajados durante el primer cuatrimestre. 
+- **Documentación:** Descripción detallada de los ítems trabajados durante el primer cuatrimestre.
