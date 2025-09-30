@@ -1,0 +1,366 @@
+<svg viewBox="0 0 1400 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .component-box { fill: #e1f5fe; stroke: #0277bd; stroke-width: 2; }
+      .interface-circle { fill: #fff; stroke: #0277bd; stroke-width: 2; }
+      .dependency-line { stroke: #666; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; }
+      .solid-line { stroke: #0277bd; stroke-width: 2; fill: none; }
+      .event-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .repository-box { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; }
+      .external-box { fill: #ffebee; stroke: #c62828; stroke-width: 2; }
+      .text-title { font-family: Arial; font-size: 12px; font-weight: bold; }
+      .text-normal { font-family: Arial; font-size: 10px; }
+      .text-small { font-family: Arial; font-size: 9px; fill: #666; }
+      .text-header { font-family: Arial; font-size: 14px; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Main Container -->
+  <rect x="30" y="30" width="1340" height="1040" fill="#f8f9fa" stroke="#dee2e6" stroke-width="3" rx="10"/>
+  <text x="700" y="20" text-anchor="middle" class="text-header" font-size="18px">Gamification Service [Container: Python, Django REST framework]</text>
+  
+  <!-- API Controllers Layer -->
+  <rect x="60" y="60" width="1280" height="140" fill="#fff" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="700" y="80" text-anchor="middle" class="text-title" font-size="13px">API Controllers Layer</text>
+  
+  <!-- XP Controller -->
+  <rect x="80" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="90" cy="105" r="8" class="interface-circle"/>
+  <text x="105" y="110" class="text-title">XP Controller</text>
+  <text x="90" y="130" class="text-small">+ awardXP(userId, amount)</text>
+  <text x="90" y="145" class="text-small">+ getXPHistory(userId)</text>
+  <text x="90" y="160" class="text-small">+ calculateLevel(xp)</text>
+  <text x="90" y="175" class="text-small">+ getLeaderboard()</text>
+  
+  <!-- Achievement Controller -->
+  <rect x="280" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="290" cy="105" r="8" class="interface-circle"/>
+  <text x="305" y="110" class="text-title">Achievement Controller</text>
+  <text x="290" y="130" class="text-small">+ getUserAchievements()</text>
+  <text x="290" y="145" class="text-small">+ unlockAchievement(id)</text>
+  <text x="290" y="160" class="text-small">+ checkProgress(userId)</text>
+  <text x="290" y="175" class="text-small">+ getAvailableAchievements()</text>
+  
+  <!-- Streak Controller -->
+  <rect x="480" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="490" cy="105" r="8" class="interface-circle"/>
+  <text x="505" y="110" class="text-title">Streak Controller</text>
+  <text x="490" y="130" class="text-small">+ updateStreak(userId)</text>
+  <text x="490" y="145" class="text-small">+ getCurrentStreak()</text>
+  <text x="490" y="160" class="text-small">+ getLongestStreak()</text>
+  <text x="490" y="175" class="text-small">+ checkStreakStatus()</text>
+  
+  <!-- Level Controller -->
+  <rect x="680" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="690" cy="105" r="8" class="interface-circle"/>
+  <text x="705" y="110" class="text-title">Level Controller</text>
+  <text x="690" y="130" class="text-small">+ getLevelInfo(userId)</text>
+  <text x="690" y="145" class="text-small">+ calculateNextLevel()</text>
+  <text x="690" y="160" class="text-small">+ getLevelRewards()</text>
+  <text x="690" y="175" class="text-small">+ checkLevelUp()</text>
+  
+  <!-- Rewards Controller -->
+  <rect x="880" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="890" cy="105" r="8" class="interface-circle"/>
+  <text x="905" y="110" class="text-title">Rewards Controller</text>
+  <text x="890" y="130" class="text-small">+ awardCoins(userId, amount)</text>
+  <text x="890" y="145" class="text-small">+ getUserBalance()</text>
+  <text x="890" y="160" class="text-small">+ spendCoins()</text>
+  <text x="890" y="175" class="text-small">+ getTransactionHistory()</text>
+  
+  <!-- Challenge Controller -->
+  <rect x="1080" y="95" width="180" height="90" class="component-box" rx="5"/>
+  <circle cx="1090" cy="105" r="8" class="interface-circle"/>
+  <text x="1105" y="110" class="text-title">Challenge Controller</text>
+  <text x="1090" y="130" class="text-small">+ getActiveChallenges()</text>
+  <text x="1090" y="145" class="text-small">+ joinChallenge()</text>
+  <text x="1090" y="160" class="text-small">+ updateProgress()</text>
+  <text x="1090" y="175" class="text-small">+ completechallenge()</text>
+  
+  <!-- Business Logic Layer -->
+  <rect x="60" y="230" width="1280" height="180" fill="#fff" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="700" y="250" text-anchor="middle" class="text-title" font-size="13px">Business Logic Layer (Services)</text>
+  
+  <!-- XP Service -->
+  <rect x="80" y="265" width="180" height="130" class="component-box" rx="5"/>
+  <circle cx="90" cy="275" r="8" class="interface-circle"/>
+  <text x="105" y="280" class="text-title">XP Service</text>
+  <text x="90" y="300" class="text-small">- calculateXPGain(taskDifficulty)</text>
+  <text x="90" y="315" class="text-small">- applyMultipliers()</text>
+  <text x="90" y="330" class="text-small">- validateXPTransaction()</text>
+  <text x="90" y="345" class="text-small">- getXPRequirementForLevel()</text>
+  <text x="90" y="360" class="text-small">- processLevelUp()</text>
+  <text x="90" y="375" class="text-small">- publishXPGainedEvent()</text>
+  
+  <!-- Achievement Service -->
+  <rect x="280" y="265" width="180" height="130" class="component-box" rx="5"/>
+  <circle cx="290" cy="275" r="8" class="interface-circle"/>
+  <text x="305" y="280" class="text-title">Achievement Service</text>
+  <text x="290" y="300" class="text-small">- evaluateCriteria()</text>
+  <text x="290" y="315" class="text-small">- unlockAchievement()</text>
+  <text x="290" y="330" class="text-small">- calculateProgress()</text>
+  <text x="290" y="345" class="text-small">- grantRewards()</text>
+  <text x="290" y="360" class="text-small">- notifyUnlock()</text>
+  <text x="290" y="375" class="text-small">- publishAchievementEvent()</text>
+  
+  <!-- Streak Service -->
+  <rect x="480" y="265" width="180" height="130" class="component-box" rx="5"/>
+  <circle cx="490" cy="275" r="8" class="interface-circle"/>
+  <text x="505" y="280" class="text-title">Streak Service</text>
+  <text x="490" y="300" class="text-small">- checkDailyCompletion()</text>
+  <text x="490" y="315" class="text-small">- incrementStreak()</text>
+  <text x="490" y="330" class="text-small">- resetStreak()</text>
+  <text x="490" y="345" class="text-small">- calculateStreakBonus()</text>
+  <text x="490" y="360" class="text-small">- sendStreakReminder()</text>
+  <text x="490" y="375" class="text-small">- publishStreakEvent()</text>
+  
+  <!-- Reward Service -->
+  <rect x="680" y="265" width="180" height="130" class="component-box" rx="5"/>
+  <circle cx="690" cy="275" r="8" class="interface-circle"/>
+  <text x="705" y="280" class="text-title">Reward Service</text>
+  <text x="690" y="300" class="text-small">- calculateReward(action)</text>
+  <text x="690" y="315" class="text-small">- processRewardPayout()</text>
+  <text x="690" y="330" class="text-small">- validateBalance()</text>
+  <text x="690" y="345" class="text-small">- deductCoins()</text>
+  <text x="690" y="360" class="text-small">- trackTransaction()</text>
+  <text x="690" y="375" class="text-small">- publishRewardEvent()</text>
+  
+  <!-- Challenge Service -->
+  <rect x="880" y="265" width="200" height="130" class="component-box" rx="5"/>
+  <circle cx="890" cy="275" r="8" class="interface-circle"/>
+  <text x="905" y="280" class="text-title">Challenge Service</text>
+  <text x="890" y="300" class="text-small">- createChallenge()</text>
+  <text x="890" y="315" class="text-small">- validateParticipation()</text>
+  <text x="890" y="330" class="text-small">- trackChallengeProgress()</text>
+  <text x="890" y="345" class="text-small">- evaluateCompletion()</text>
+  <text x="890" y="360" class="text-small">- distributeRewards()</text>
+  <text x="890" y="375" class="text-small">- publishChallengeEvent()</text>
+  
+  <!-- Ranking Service -->
+  <rect x="1100" y="265" width="180" height="130" class="component-box" rx="5"/>
+  <circle cx="1110" cy="275" r="8" class="interface-circle"/>
+  <text x="1125" y="280" class="text-title">Ranking Service</text>
+  <text x="1110" y="300" class="text-small">- calculateRank(userId)</text>
+  <text x="1110" y="315" class="text-small">- updateLeaderboard()</text>
+  <text x="1110" y="330" class="text-small">- getTopPlayers(limit)</text>
+  <text x="1110" y="345" class="text-small">- getFriendsRanking()</text>
+  <text x="1110" y="360" class="text-small">- applySeasonalReset()</text>
+  <text x="1110" y="375" class="text-small">- cacheRankings()</text>
+  
+  <!-- Event Handlers Layer -->
+  <rect x="60" y="440" width="1280" height="140" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+  <text x="700" y="460" text-anchor="middle" class="text-title" font-size="13px">Event Handlers (Domain Events)</text>
+  
+  <!-- Task Completed Handler -->
+  <rect x="80" y="475" width="200" height="90" class="event-box" rx="5"/>
+  <text x="180" y="495" text-anchor="middle" class="text-title">TaskCompletedHandler</text>
+  <text x="90" y="515" class="text-small">+ onTaskCompleted(event)</text>
+  <text x="90" y="530" class="text-small">- awardXP()</text>
+  <text x="90" y="545" class="text-small">- updateStreak()</text>
+  <text x="90" y="560" class="text-small">- checkAchievements()</text>
+  
+  <!-- Streak Milestone Handler -->
+  <rect x="300" y="475" width="200" height="90" class="event-box" rx="5"/>
+  <text x="400" y="495" text-anchor="middle" class="text-title">StreakMilestoneHandler</text>
+  <text x="310" y="515" class="text-small">+ onStreakMilestone(event)</text>
+  <text x="310" y="530" class="text-small">- unlockAchievement()</text>
+  <text x="310" y="545" class="text-small">- awardBonus()</text>
+  <text x="310" y="560" class="text-small">- sendCelebration()</text>
+  
+  <!-- Level Up Handler -->
+  <rect x="520" y="475" width="200" height="90" class="event-box" rx="5"/>
+  <text x="620" y="495" text-anchor="middle" class="text-title">LevelUpHandler</text>
+  <text x="530" y="515" class="text-small">+ onLevelUp(event)</text>
+  <text x="530" y="530" class="text-small">- grantLevelRewards()</text>
+  <text x="530" y="545" class="text-small">- unlockFeatures()</text>
+  <text x="530" y="560" class="text-small">- notifyUser()</text>
+  
+  <!-- Achievement Unlocked Handler -->
+  <rect x="740" y="475" width="200" height="90" class="event-box" rx="5"/>
+  <text x="840" y="495" text-anchor="middle" class="text-title">AchievementUnlockedHandler</text>
+  <text x="750" y="515" class="text-small">+ onAchievementUnlocked()</text>
+  <text x="750" y="530" class="text-small">- distributeRewards()</text>
+  <text x="750" y="545" class="text-small">- updateProfile()</text>
+  <text x="750" y="560" class="text-small">- shareToSocial()</text>
+  
+  <!-- Challenge Completed Handler -->
+  <rect x="960" y="475" width="200" height="90" class="event-box" rx="5"/>
+  <text x="1060" y="495" text-anchor="middle" class="text-title">ChallengeCompletedHandler</text>
+  <text x="970" y="515" class="text-small">+ onChallengeCompleted()</text>
+  <text x="970" y="530" class="text-small">- calculateRankings()</text>
+  <text x="970" y="545" class="text-small">- awardWinners()</text>
+  <text x="970" y="560" class="text-small">- closeChallenge()</text>
+  
+  <!-- Repository Layer -->
+  <rect x="60" y="610" width="1280" height="140" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="700" y="630" text-anchor="middle" class="text-title" font-size="13px">Data Access Layer (Repositories)</text>
+  
+  <!-- XP Repository -->
+  <rect x="80" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="170" y="665" text-anchor="middle" class="text-title">XP Repository</text>
+  <text x="90" y="685" class="text-small">+ save(xpTransaction)</text>
+  <text x="90" y="700" class="text-small">+ findByUserId()</text>
+  <text x="90" y="715" class="text-small">+ getTotalXP(userId)</text>
+  <text x="90" y="730" class="text-small">+ getXPHistory()</text>
+  
+  <!-- Achievement Repository -->
+  <rect x="280" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="370" y="665" text-anchor="middle" class="text-title">Achievement Repository</text>
+  <text x="290" y="685" class="text-small">+ findAll()</text>
+  <text x="290" y="700" class="text-small">+ findByUserId()</text>
+  <text x="290" y="715" class="text-small">+ saveUnlock()</text>
+  <text x="290" y="730" class="text-small">+ getProgress()</text>
+  
+  <!-- Streak Repository -->
+  <rect x="480" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="570" y="665" text-anchor="middle" class="text-title">Streak Repository</text>
+  <text x="490" y="685" class="text-small">+ save(streakData)</text>
+  <text x="490" y="700" class="text-small">+ findByUserId()</text>
+  <text x="490" y="715" class="text-small">+ updateCurrent()</text>
+  <text x="490" y="730" class="text-small">+ getHistory()</text>
+  
+  <!-- Reward Repository -->
+  <rect x="680" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="770" y="665" text-anchor="middle" class="text-title">Reward Repository</text>
+  <text x="690" y="685" class="text-small">+ saveTransaction()</text>
+  <text x="690" y="700" class="text-small">+ getBalance(userId)</text>
+  <text x="690" y="715" class="text-small">+ findTransactions()</text>
+  <text x="690" y="730" class="text-small">+ updateBalance()</text>
+  
+  <!-- Challenge Repository -->
+  <rect x="880" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="970" y="665" text-anchor="middle" class="text-title">Challenge Repository</text>
+  <text x="890" y="685" class="text-small">+ save(challenge)</text>
+  <text x="890" y="700" class="text-small">+ findActive()</text>
+  <text x="890" y="715" class="text-small">+ findByUserId()</text>
+  <text x="890" y="730" class="text-small">+ updateProgress()</text>
+  
+  <!-- Leaderboard Repository -->
+  <rect x="1080" y="645" width="180" height="90" class="repository-box" rx="5"/>
+  <text x="1170" y="665" text-anchor="middle" class="text-title">Leaderboard Repository</text>
+  <text x="1090" y="685" class="text-small">+ updateRank(userId)</text>
+  <text x="1090" y="700" class="text-small">+ getTopN(limit)</text>
+  <text x="1090" y="715" class="text-small">+ getUserRank()</text>
+  <text x="1090" y="730" class="text-small">+ getFriendsRanks()</text>
+  
+  <!-- External Integrations -->
+  <rect x="60" y="780" width="620" height="100" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="370" y="800" text-anchor="middle" class="text-title" font-size="13px">External Integrations</text>
+  
+  <!-- Database -->
+  <rect x="80" y="815" width="150" height="50" class="external-box" rx="5"/>
+  <text x="155" y="835" text-anchor="middle" class="text-title">PostgreSQL</text>
+  <text x="155" y="852" text-anchor="middle" class="text-small">[Gamification DB]</text>
+  
+  <!-- Cache -->
+  <rect x="250" y="815" width="150" height="50" class="external-box" rx="5"/>
+  <text x="325" y="835" text-anchor="middle" class="text-title">Redis Cache</text>
+  <text x="325" y="852" text-anchor="middle" class="text-small">[Rankings, Sessions]</text>
+  
+  <!-- Message Queue -->
+  <rect x="420" y="815" width="150" height="50" class="external-box" rx="5"/>
+  <text x="495" y="835" text-anchor="middle" class="text-title">Message Queue</text>
+  <text x="495" y="852" text-anchor="middle" class="text-small">[RabbitMQ/Redis]</text>
+  
+  <!-- Notification Service -->
+  <rect x="590" y="815" width="170" height="50" class="external-box" rx="5"/>
+  <text x="675" y="835" text-anchor="middle" class="text-title">Notification Service</text>
+  <text x="675" y="852" text-anchor="middle" class="text-small">[Push, Email, SMS]</text>
+  
+  <!-- Utilities -->
+  <rect x="710" y="780" width="630" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="1025" y="800" text-anchor="middle" class="text-title" font-size="13px">Utility Components</text>
+  
+  <!-- Config Manager -->
+  <rect x="730" y="815" width="140" height="50" class="component-box" rx="5"/>
+  <text x="800" y="835" text-anchor="middle" class="text-small">Config Manager</text>
+  <text x="800" y="850" text-anchor="middle" class="text-small">Settings, Rules</text>
+  
+  <!-- Validator -->
+  <rect x="890" y="815" width="140" height="50" class="component-box" rx="5"/>
+  <text x="960" y="835" text-anchor="middle" class="text-small">Data Validator</text>
+  <text x="960" y="850" text-anchor="middle" class="text-small">Input validation</text>
+  
+  <!-- Calculator -->
+  <rect x="1050" y="815" width="140" height="50" class="component-box" rx="5"/>
+  <text x="1120" y="835" text-anchor="middle" class="text-small">Formula Calculator</text>
+  <text x="1120" y="850" text-anchor="middle" class="text-small">XP, rewards math</text>
+  
+  <!-- Logger -->
+  <rect x="1210" y="815" width="110" height="50" class="component-box" rx="5"/>
+  <text x="1265" y="835" text-anchor="middle" class="text-small">Logger</text>
+  <text x="1265" y="850" text-anchor="middle" class="text-small">Audit trail</text>
+  
+  <!-- Domain Models -->
+  <rect x="60" y="910" width="1280" height="140" fill="#fff" stroke="#0277bd" stroke-width="2" rx="5"/>
+  <text x="700" y="930" text-anchor="middle" class="text-title" font-size="13px">Domain Models (Entities)</text>
+  
+  <!-- Models -->
+  <rect x="100" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="170" y="965" text-anchor="middle" class="text-title">XPTransaction</text>
+  <text x="110" y="985" class="text-small">userId, amount</text>
+  <text x="110" y="1000" class="text-small">reason, timestamp</text>
+  <text x="110" y="1015" class="text-small">multiplier</text>
+  
+  <rect x="260" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="330" y="965" text-anchor="middle" class="text-title">Achievement</text>
+  <text x="270" y="985" class="text-small">id, name, criteria</text>
+  <text x="270" y="1000" class="text-small">reward, icon</text>
+  <text x="270" y="1015" class="text-small">rarity</text>
+  
+  <rect x="420" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="490" y="965" text-anchor="middle" class="text-title">Streak</text>
+  <text x="430" y="985" class="text-small">userId, current</text>
+  <text x="430" y="1000" class="text-small">longest, lastDate</text>
+  <text x="430" y="1015" class="text-small">bonusMultiplier</text>
+  
+  <rect x="580" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="650" y="965" text-anchor="middle" class="text-title">Level</text>
+  <text x="590" y="985" class="text-small">level, xpRequired</text>
+  <text x="590" y="1000" class="text-small">rewards, perks</text>
+  <text x="590" y="1015" class="text-small">title</text>
+  
+  <rect x="740" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="810" y="965" text-anchor="middle" class="text-title">Reward</text>
+  <text x="750" y="985" class="text-small">userId, coins</text>
+  <text x="750" y="1000" class="text-small">gems, items</text>
+  <text x="750" y="1015" class="text-small">timestamp</text>
+  
+  <rect x="900" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="970" y="965" text-anchor="middle" class="text-title">Challenge</text>
+  <text x="910" y="985" class="text-small">id, name, goal</text>
+  <text x="910" y="1000" class="text-small">startDate, endDate</text>
+  <text x="910" y="1015" class="text-small">participants</text>
+  
+  <rect x="1060" y="945" width="140" height="80" class="component-box" rx="5"/>
+  <text x="1130" y="965" text-anchor="middle" class="text-title">LeaderboardEntry</text>
+  <text x="1070" y="985" class="text-small">userId, rank</text>
+  <text x="1070" y="1000" class="text-small">score, position</text>
+  <text x="1070" y="1015" class="text-small">period</text>
+  
+  <!-- Dependencies (arrows) -->
+  
+  <!-- Controllers to Services -->
+  <line x1="170" y1="185" x2="170" y2="265" class="dependency-line"/>
+  <line x1="370" y1="185" x2="370" y2="265" class="dependency-line"/>
+  <line x1="570" y1="185" x2="570" y2="265" class="dependency-line"/>
+  <line x1="770" y1="185" x2="770" y2="265" class="dependency-line"/>
+  <line x1="970" y1="185" x2="970" y2="265" class="dependency-line"/>
+  <line x1="1170" y1="185" x2="1190" y2="265" class="dependency-line"/>
+  
+  <!-- Services to Event Handlers -->
+  <line x1="180" y1="395" x2="180" y2="475" class="dependency-line"/>
+  <line x1="400" y1="395" x2="400" y2="475" class="dependency-line"/>
+  <line x1="620" y1="395" x2="620" y2="475" class="dependency-line"/>
+  
+  <!-- Services to Repositories -->
+  <line x1="170" y1="395" x2="170" y2="645" class="dependency-line"/>
+  <line x1="370" y1="395" x2="370" y2="645" class="dependency-line"/>
+  <line x1="570" y1="395" x2="570" y2="645" class="dependency-line"/>
+  <line x1="770" y1="395" x2="770" y2="645" class="dependency-line"/>
+  <line x1="980" y1="395" x2="970" y2="645" class="dependency-line"/>
+  <line x1="1190" y1="395" x2="1170" y2="645" class="dependency-line"/>
+  
+  <!-- Repositories to Database -->
+  <line x1="170" y1="735" x2="155" y2="815" class="dependency-line"/>
+  <line x1="370" y1="735" x2="200
