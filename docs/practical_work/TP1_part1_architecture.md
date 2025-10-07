@@ -1,20 +1,17 @@
 ## Ingeniería de Software II
 ## Trabajo Práctico 1 Parte 1: Arquitectura
 
+`Carrera:` Licenciatura en Ciencia de Datos
 
-Carrera: Licenciatura en Ciencia de Datos
+`Cátedra:` Ingeniería de Software II
 
-Cátedra: Ingeniería de Software II
+`Docentes:` Valotto, Victor; Godoy, Cielo
 
-Título: Trabajo Práctico 1 - Parte 1: Arquitectura
+`Alumnos:` Carrozzo, Felipe; Ré, Lautaro Caupolicán
 
-Docentes: Valotto, Victor; Godoy, Cielo
+`Año:` 2025
 
-Alumnos: Carrozzo, Felipe; Ré, Lautaro Caupolicán
-
-Año: 2025
-
-Desarrollo
+**Desarrollo**
 
 **1. Indagar y debatir el significado de los siguientes términos y sus diferencias.**
 
