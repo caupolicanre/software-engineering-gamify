@@ -1,5 +1,5 @@
 ## Ingeniería de Software II
-## Trabajo Práctico 1 Parte 1: Arquitectura
+## Trabajo Práctico 2: Diagrama de secuencia con casos de uso
 
 `Carrera:` Licenciatura en Ciencia de Datos
 
