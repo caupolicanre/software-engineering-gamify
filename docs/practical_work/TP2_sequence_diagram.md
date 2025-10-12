@@ -1,5 +1,4 @@
-## Ingeniería de Software II
-## Trabajo Práctico 2: Diagrama de secuencia con casos de uso
+# Trabajo Práctico 2: Diagrama de secuencia con casos de uso
 
 `Carrera:` Licenciatura en Ciencia de Datos
 
@@ -11,9 +10,11 @@
 
 `Año:` 2025
 
-**Desarrollo**
+---
 
-**1. Repaso teórico**
+# Desarrollo
+
+## 1. Repaso teórico
 
 - ¿Qué información brinda un diagrama de secuencia?
   - Un diagrama de secuencia muestra la dinámica de interacción entre objetos en un contexto temporal, mostrando cómo colaboran para llevar a cabo una funcionalidad específica.

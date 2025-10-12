@@ -1,5 +1,4 @@
-## Ingeniería de Software II
-## Trabajo Práctico 3: diagrama de clase y diagrama de despliegue
+# Trabajo Práctico 3: Diagrama de clase y diagrama de despliegue
 
 `Carrera:` Licenciatura en Ciencia de Datos
 
@@ -11,9 +10,11 @@
 
 `Año:` 2025
 
-**Desarrollo**
+---
 
-**1. Ejercicio de análisis**
+# Desarrollo
+
+## 1. Ejercicio de análisis
 
 > Explicar qué comunica cada uno de estos diagramas y qué diferencia hay entre ellos.
 
@@ -23,7 +24,7 @@
     - Modelar las entidades principales (por ejemplo, Usuario, Tarea, Perfil, GestorDeUsuarios, etc.).
     - Mostrar la **relación entre las clases** (quién usa a quién, quién contiene a quién, etc.).
     - **Facilitar la implementación** en código orientado a objetos.
-    ---
+
   - *Diagrama de despliegue:* muestra la estructura física del sistema, representando dónde se ejecutan los componentes (por ejemplo, en un servidor web, en una base de datos, en el celular del usuario, etc.) y cómo se comunican entre esos nodos. Sirve para:
 
     - Mostrar los **nodos físicos** (servidores, dispositivos móviles, PCs, etc.).
@@ -33,4 +34,4 @@
 
 > Justificar por qué es importante mantener la trazabilidad entre C4 → Clases → Despliegue.
 
-  - Mantener la trazabilidad entre los diagramas C4, de clases y de despliegue es fundamental para asegurar la coherencia entre la arquitectura conceptual, el diseño lógico y la implementación física del sistema. Esto permite verificar que cada componente definido se encuentre correctamente representado en el código y desplegado en la infraestructura, facilitando además el mantenimiento y la gestión de cambios.
+  - Mantener la trazabilidad entre los diagramas **C4**, de **clases** y de **despliegue** es fundamental para asegurar la coherencia entre la arquitectura conceptual, el diseño lógico y la implementación física del sistema. Esto permite verificar que cada componente definido se encuentre correctamente representado en el código y desplegado en la infraestructura, facilitando además el mantenimiento y la gestión de cambios.
