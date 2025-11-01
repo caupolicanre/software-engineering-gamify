@@ -58,8 +58,8 @@
 ## 3. Diagramación
 
 - Generar los *diagramas de secuencia* para cada escenario principal de los dos casos de uso seleccionados:
-1. [Completar tarea](docs/design/diagrams/images/sequence_diagram_complete_task.png)
-2. [Registro de nuevo usuario](docs/design/diagrams/images/sequence_diagram_new_user.png)
+1. [Completar tarea](../design/diagrams/images/sequence_diagram_complete_task.png)
+2. [Registro de nuevo usuario](../design/diagrams/images/sequence_diagram_new_user.png)
 - Identificar qué objetos (clases instanciadas) participan y cómo colaboran.
 - Reflejar en los diagramas las decisiones de diseño tomadas en la arquitectura (ejemplo: capas, servicios, repositorios, controladores).
 
