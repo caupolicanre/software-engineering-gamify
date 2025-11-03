@@ -128,7 +128,7 @@ extend-select = [
     "W",        # Warning
 
     # pydoclint
-    "DOC",      # Docstring
+    # "DOC",      # Docstring
 
     # pydocstyle
     "D",        # Docstring
