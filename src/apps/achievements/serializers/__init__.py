@@ -1,0 +1,138 @@
+"""Serializers for Achievement API."""
+
+from rest_framework import serializers
+
+from apps.achievements.models import Achievement, UserAchievement
+
+
+class AchievementSerializer(serializers.ModelSerializer):
+    """Serializer for Achievement model."""
+
+    rarity_display = serializers.CharField(source="get_rarity_display", read_only=True)
+    criteria_type_display = serializers.CharField(source="get_criteria_type_display", read_only=True)
+
+    class Meta:
+        model = Achievement
+        fields = [
+            "id",
+            "name",
+            "description",
+            "criteria",
+            "criteria_type",
+            "criteria_type_display",
+            "reward_xp",
+            "reward_coins",
+            "icon",
+            "rarity",
+            "rarity_display",
+            "is_active",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = ["id", "created_at", "updated_at"]
+
+    def validate_criteria(self, value):
+        """Validate criteria JSON format."""
+        if not isinstance(value, dict):
+            criteria_error = "Criteria must be a valid JSON object"
+            raise serializers.ValidationError(criteria_error)
+
+        # Add specific validation based on criteria_type
+        # For now, just ensure it's a dict
+        return value
+
+    def validate_reward_xp(self, value):
+        """Validate reward XP is non-negative."""
+        if value < 0:
+            reward_xp_error = "Reward XP must be non-negative"
+            raise serializers.ValidationError(reward_xp_error)
+        return value
+
+    def validate_reward_coins(self, value):
+        """Validate reward coins is non-negative."""
+        if value < 0:
+            reward_coins_error = "Reward coins must be non-negative"
+            raise serializers.ValidationError(reward_coins_error)
+        return value
+
+
+class UserAchievementSerializer(serializers.ModelSerializer):
+    """Serializer for UserAchievement model."""
+
+    achievement = AchievementSerializer(read_only=True)
+    achievement_id = serializers.UUIDField(write_only=True, required=False)
+
+    class Meta:
+        model = UserAchievement
+        fields = [
+            "id",
+            "user",
+            "achievement",
+            "achievement_id",
+            "unlocked_at",
+            "progress",
+            "is_completed",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = ["id", "user", "unlocked_at", "created_at", "updated_at"]
+
+    def validate_progress(self, value):
+        """Validate progress is between 0 and 100."""
+        if value < 0 or value > 100:
+            progress_error = "Progress must be between 0 and 100"
+            raise serializers.ValidationError(progress_error)
+        return value
+
+    def create(self, validated_data):
+        """Create UserAchievement instance."""
+        # User is set from request context in viewset
+        return super().create(validated_data)
+
+
+class AchievementProgressSerializer(serializers.Serializer):
+    """
+    Serializer for achievement progress information.
+    """
+
+    achievement_id = serializers.UUIDField()
+    achievement_name = serializers.CharField()
+    current_progress = serializers.DecimalField(max_digits=5, decimal_places=2)
+    required_progress = serializers.IntegerField()
+    percentage = serializers.DecimalField(max_digits=5, decimal_places=2)
+    is_unlocked = serializers.BooleanField()
+
+    def calculate_percentage(self):
+        """Calculate percentage from current/required progress."""
+        current = self.validated_data.get("current_progress", 0)
+        required = self.validated_data.get("required_progress", 1)
+
+        if required == 0:
+            return 100.0
+
+        return min(100.0, (float(current) / float(required)) * 100)
+
+
+class UserAchievementListSerializer(serializers.Serializer):
+    """
+    Serializer for listing user achievements with progress.
+    """
+
+    achievement = AchievementSerializer()
+    progress = serializers.DecimalField(max_digits=5, decimal_places=2)
+    is_unlocked = serializers.BooleanField()
+    unlocked_at = serializers.DateTimeField(allow_null=True)
+
+
+class AchievementUnlockRequestSerializer(serializers.Serializer):
+    """
+    Serializer for achievement unlock request.
+    """
+
+    achievement_id = serializers.UUIDField(required=True)
+
+    def validate_achievement_id(self, value):
+        """Validate achievement exists."""
+        if not Achievement.objects.filter(id=value, is_active=True).exists():
+            raise serializers.ValidationError("Achievement does not exist or is not active")
+        return value
