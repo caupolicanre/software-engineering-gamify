@@ -1,6 +1,4 @@
-"""
-AchievementService - Main business logic for achievement operations.
-"""
+"""AchievementService - Main business logic for achievement operations."""
 
 import logging
 
@@ -29,7 +27,8 @@ class AchievementService:
         - Send notifications
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize the AchievementService."""
         self.evaluator = AchievementEvaluator()
         self.validator = AchievementValidator()
         self.event_publisher = EventPublisher()
@@ -40,7 +39,7 @@ class AchievementService:
         self,
         user_id: int,
         event_type: str,
-        event_data: dict,
+        _event_data: dict,
     ) -> list[UserAchievement]:
         """
         Check all achievements and unlock those whose criteria are met.
@@ -48,19 +47,19 @@ class AchievementService:
         Args:
             user_id: User ID
             event_type: Type of event that triggered this check (e.g., 'task_completed')
-            event_data: Event data containing relevant information
+            _event_data: Event data containing relevant information (reserved for future use)
 
         Returns:
             List of newly unlocked UserAchievement instances
 
         """
-        logger.info(f"Checking achievements for user {user_id} after event {event_type}")
+        logger.info("Checking achievements for user %s after event %s", user_id, event_type)
 
         # Get user statistics
         try:
             user_stats = UserStatistics.objects.get(user_id=user_id)
         except UserStatistics.DoesNotExist:
-            logger.warning(f"User statistics not found for user {user_id}. Creating default.")
+            logger.warning("User statistics not found for user %s. Creating default", user_id)
             user_stats = UserStatistics.objects.create(user_id=user_id)
 
         # Get relevant achievements based on event type
@@ -71,7 +70,7 @@ class AchievementService:
         for achievement in achievements:
             # Check if already unlocked
             if not self.validator.validate_not_already_unlocked(user_id, achievement.id):
-                logger.debug(f"Achievement {achievement.id} already unlocked for user {user_id}")
+                logger.debug("Achievement %s already unlocked for user %s", achievement.id, user_id)
                 continue
 
             # Evaluate criteria
@@ -94,7 +93,7 @@ class AchievementService:
                 )
                 self._update_progress(user_id, achievement.id, progress)
 
-        logger.info(f"Unlocked {len(newly_unlocked)} achievements for user {user_id}")
+        logger.info("Unlocked %d achievements for user %s", len(newly_unlocked), user_id)
         return newly_unlocked
 
     @transaction.atomic
@@ -117,14 +116,16 @@ class AchievementService:
             ValueError: If achievement doesn't exist or is already unlocked
 
         """
-        logger.info(f"Unlocking achievement {achievement_id} for user {user_id}")
+        logger.info("Unlocking achievement %s for user %s", achievement_id, user_id)
 
         # Validate
         if not self.validator.validate_achievement_exists(achievement_id):
-            raise ValueError(f"Achievement {achievement_id} does not exist")
+            msg = f"Achievement {achievement_id} does not exist"
+            raise ValueError(msg)
 
         if not self.validator.validate_not_already_unlocked(user_id, achievement_id):
-            raise ValueError(f"Achievement {achievement_id} already unlocked for user {user_id}")
+            msg = f"Achievement {achievement_id} already unlocked for user {user_id}"
+            raise ValueError(msg)
 
         # Get achievement
         achievement = Achievement.objects.get(id=achievement_id)
@@ -152,12 +153,13 @@ class AchievementService:
         # Send notification
         self._notify_achievement_unlock(user_id, achievement)
 
-        logger.info(f"Achievement {achievement.name} unlocked for user {user_id}")
+        logger.info("Achievement %s unlocked for user %s", achievement.name, user_id)
         return user_achievement
 
     def get_user_achievements(
         self,
         user_id: int,
+        *,
         include_locked: bool = False,
     ) -> list[dict]:
         """
@@ -292,9 +294,9 @@ class AchievementService:
 
         return list(Achievement.objects.get_active_achievements())
 
-    def _update_progress(self, user_id: int, achievement_id: str, progress: float):
+    def _update_progress(self, user_id: int, achievement_id: str, progress: float) -> None:
         """Update progress for an achievement."""
-        user_achievement, created = UserAchievement.objects.get_or_create_progress(
+        user_achievement, _created = UserAchievement.objects.get_or_create_progress(
             user_id,
             achievement_id,
         )
@@ -308,12 +310,17 @@ class AchievementService:
             "coins": achievement.reward_coins,
         }
 
-        logger.info(f"Granted rewards to user {user_id}: {rewards}")
-        # TODO: Call external Reward Service
+        logger.info("Granted rewards to user %s: %s", user_id, rewards)
+        # NOTE: External Reward Service integration pending
 
         return rewards
 
-    def _publish_achievement_event(self, user_id: int, achievement: Achievement, rewards: dict):
+    def _publish_achievement_event(
+        self,
+        user_id: int,
+        achievement: Achievement,
+        rewards: dict,
+    ) -> None:
         """Publish AchievementUnlocked event."""
         self.event_publisher.publish_achievement_unlocked(
             user_id=user_id,
@@ -322,7 +329,7 @@ class AchievementService:
             rewards=rewards,
         )
 
-    def _notify_achievement_unlock(self, user_id: int, achievement: Achievement):
+    def _notify_achievement_unlock(self, user_id: int, achievement: Achievement) -> None:
         """Send notification about achievement unlock."""
         self.notification_sender.send_achievement_notification(
             user_id=user_id,

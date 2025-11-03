@@ -1,6 +1,4 @@
-"""
-Business validation utilities for achievements.
-"""
+"""Business validation utilities for achievements."""
 
 import logging
 
@@ -11,9 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 class AchievementValidator:
-    """
-    Validates business rules for achievements.
-    """
+    """Validates business rules for achievements."""
 
     def validate_achievement_exists(self, achievement_id: str) -> bool:
         """
@@ -77,15 +73,15 @@ class AchievementValidator:
         try:
             achievement = Achievement.objects.get(id=achievement_id)
             if not achievement.is_active:
-                logger.warning(f"Achievement {achievement_id} is not active")
+                logger.warning("Achievement %s is not active", achievement_id)
                 return False
         except Achievement.DoesNotExist:
-            logger.warning(f"Achievement {achievement_id} does not exist")
+            logger.warning("Achievement %s does not exist", achievement_id)
             return False
 
         # Check if not already unlocked
         if not self.validate_not_already_unlocked(user_id, achievement_id):
-            logger.warning(f"Achievement {achievement_id} already unlocked for user {user_id}")
+            logger.warning("Achievement %s already unlocked for user %s", achievement_id, user_id)
             return False
 
         return True
@@ -102,6 +98,6 @@ class AchievementValidator:
             True if valid
         """
         if xp < 0 or coins < 0:
-            logger.warning(f"Reward values must be positive: xp={xp}, coins={coins}")
+            logger.warning("Reward values must be positive: xp=%d, coins=%d", xp, coins)
             return False
         return True

@@ -17,7 +17,8 @@ app.config_from_object("django.conf:settings", namespace="CELERY")
 
 
 @setup_logging.connect
-def config_loggers(*args, **kwargs):
+def config_loggers(*args, **kwargs) -> None:
+    """Configure logging for Celery using Django settings."""
     from logging.config import dictConfig  # noqa: PLC0415
 
     from django.conf import settings  # noqa: PLC0415

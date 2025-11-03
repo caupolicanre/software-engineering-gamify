@@ -157,6 +157,10 @@ extend-select = [
     "TRY",      # Prevent Exception Handling AntiPatterns
 ]
 ignore = [
+    # Annotations
+    "ANN002",   # missing-type-args
+    "ANN003",   # missing-type-kwargs
+
     # Boolean Trap
     "FBT001",   # Boolean-typed positional argument in function definition
 

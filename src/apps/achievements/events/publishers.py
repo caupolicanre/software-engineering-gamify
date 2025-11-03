@@ -1,9 +1,9 @@
-"""
-Event publishers that publish domain events to message queue.
-"""
+"""Event publishers that publish domain events to message queue."""
 
 import json
 import logging
+
+from django.utils import timezone
 
 
 logger = logging.getLogger(__name__)
@@ -17,8 +17,9 @@ class EventPublisher:
     For now, it's a placeholder that logs events.
     """
 
-    def __init__(self):
-        self.message_queue_client = None  # TODO: Initialize RabbitMQ client
+    def __init__(self) -> None:
+        """Initialize the EventPublisher."""
+        self.message_queue_client = None  # TODO: RabbitMQ client initialization pending
 
     def publish_achievement_unlocked(
         self,
@@ -26,7 +27,7 @@ class EventPublisher:
         achievement_id: str,
         achievement_name: str,
         rewards: dict,
-    ):
+    ) -> None:
         """
         Publish AchievementUnlocked event.
 
@@ -52,7 +53,7 @@ class EventPublisher:
         user_id: int,
         achievement_id: str,
         progress: float,
-    ):
+    ) -> None:
         """
         Publish ProgressUpdated event.
 
@@ -71,7 +72,7 @@ class EventPublisher:
 
         self._publish_to_queue("achievement.progress", event_data)
 
-    def _publish_to_queue(self, routing_key: str, event_data: dict):
+    def _publish_to_queue(self, routing_key: str, event_data: dict) -> None:
         """
         Publish event to message queue.
 
@@ -79,9 +80,9 @@ class EventPublisher:
             routing_key: RabbitMQ routing key
             event_data: Event payload
         """
-        # TODO: Implement actual RabbitMQ publishing
+        # NOTE: Implement actual RabbitMQ publishing
         # For now, just log the event
-        logger.info(f"Publishing event to {routing_key}: {json.dumps(event_data)}")
+        logger.info("Publishing event to %s: %s", routing_key, json.dumps(event_data))
 
         # In production:
         # self.message_queue_client.publish(
@@ -92,8 +93,6 @@ class EventPublisher:
 
     def _get_timestamp(self) -> str:
         """Get current timestamp as ISO string."""
-        from django.utils import timezone
-
         return timezone.now().isoformat()
 
     def _serialize_event(self, event_type: str, data: dict) -> dict:

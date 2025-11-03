@@ -1,6 +1,4 @@
-"""
-Event handlers that listen to external events and trigger achievement checks.
-"""
+"""Event handlers that listen to external events and trigger achievement checks."""
 
 import logging
 
@@ -18,10 +16,11 @@ class TaskCompletedEventHandler:
     should be unlocked.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize the TaskCompletedEventHandler."""
         self.achievement_service = AchievementService()
 
-    def handle_task_completed(self, event_data: dict):
+    def handle_task_completed(self, event_data: dict) -> None:
         """
         Process TaskCompleted event.
 
@@ -39,7 +38,7 @@ class TaskCompletedEventHandler:
             user_id = self._extract_user_id(event_data)
             task_info = self._extract_task_info(event_data)
 
-            logger.info(f"Handling TaskCompleted event for user {user_id}")
+            logger.info("Handling TaskCompleted event for user %s", user_id)
 
             # Check and unlock achievements
             unlocked = self.achievement_service.check_and_unlock_achievements(
@@ -48,10 +47,10 @@ class TaskCompletedEventHandler:
                 event_data=task_info,
             )
 
-            logger.info(f"Unlocked {len(unlocked)} achievements for user {user_id}")
+            logger.info("Unlocked %d achievements for user %s", len(unlocked), user_id)
 
-        except Exception as e:
-            logger.error(f"Error handling TaskCompleted event: {e}", exc_info=True)
+        except Exception:
+            logger.exception("Error handling TaskCompleted event")
 
     def _extract_user_id(self, event_data: dict) -> int:
         """Extract user_id from event data."""
@@ -74,10 +73,11 @@ class StreakMilestoneEventHandler:
     When a user reaches a streak milestone, checks for streak-related achievements.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize the StreakMilestoneEventHandler."""
         self.achievement_service = AchievementService()
 
-    def handle_streak_milestone(self, event_data: dict):
+    def handle_streak_milestone(self, event_data: dict) -> None:
         """
         Process StreakMilestone event.
 
@@ -93,7 +93,7 @@ class StreakMilestoneEventHandler:
             user_id = event_data.get("user_id")
             streak_days = self._extract_streak_days(event_data)
 
-            logger.info(f"Handling StreakMilestone event for user {user_id} ({streak_days} days)")
+            logger.info("Handling StreakMilestone event for user %s (%d days)", user_id, streak_days)
 
             # Check and unlock achievements
             unlocked = self.achievement_service.check_and_unlock_achievements(
@@ -102,10 +102,10 @@ class StreakMilestoneEventHandler:
                 event_data={"streak_days": streak_days},
             )
 
-            logger.info(f"Unlocked {len(unlocked)} streak achievements for user {user_id}")
+            logger.info("Unlocked %d streak achievements for user %s", len(unlocked), user_id)
 
-        except Exception as e:
-            logger.error(f"Error handling StreakMilestone event: {e}", exc_info=True)
+        except Exception:
+            logger.exception("Error handling StreakMilestone event")
 
     def _extract_streak_days(self, event_data: dict) -> int:
         """Extract streak days from event data."""
@@ -119,10 +119,11 @@ class LevelUpEventHandler:
     When a user levels up, checks for level-related achievements.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize the LevelUpEventHandler."""
         self.achievement_service = AchievementService()
 
-    def handle_level_up(self, event_data: dict):
+    def handle_level_up(self, event_data: dict) -> None:
         """
         Process LevelUp event.
 
@@ -139,7 +140,7 @@ class LevelUpEventHandler:
             user_id = event_data.get("user_id")
             new_level = self._extract_new_level(event_data)
 
-            logger.info(f"Handling LevelUp event for user {user_id} (level {new_level})")
+            logger.info("Handling LevelUp event for user %s (level %d)", user_id, new_level)
 
             # Check and unlock achievements
             unlocked = self.achievement_service.check_and_unlock_achievements(
@@ -148,10 +149,10 @@ class LevelUpEventHandler:
                 event_data={"new_level": new_level},
             )
 
-            logger.info(f"Unlocked {len(unlocked)} level achievements for user {user_id}")
+            logger.info("Unlocked %d level achievements for user %s", len(unlocked), user_id)
 
-        except Exception as e:
-            logger.error(f"Error handling LevelUp event: {e}", exc_info=True)
+        except Exception:
+            logger.exception("Error handling LevelUp event")
 
     def _extract_new_level(self, event_data: dict) -> int:
         """Extract new level from event data."""
