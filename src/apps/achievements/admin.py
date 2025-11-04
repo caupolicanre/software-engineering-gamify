@@ -1,6 +1,4 @@
-"""
-Django admin configuration for Achievement models.
-"""
+"""Django admin configuration for Achievement models."""
 
 from django.contrib import admin
 

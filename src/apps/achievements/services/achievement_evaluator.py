@@ -26,7 +26,6 @@ class AchievementEvaluator:
             Achievement.CriteriaType.TASK_COUNT: TaskCountValidator(),
             Achievement.CriteriaType.STREAK: StreakValidator(),
             Achievement.CriteriaType.LEVEL: LevelValidator(),
-            # Add more validators as needed
         }
 
     def evaluate_criteria(

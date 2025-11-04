@@ -1,6 +1,4 @@
-"""
-Utility for sending notifications via Notification Service.
-"""
+"""Utility for sending notifications via Notification Service."""
 
 import logging
 
@@ -11,19 +9,13 @@ logger = logging.getLogger(__name__)
 
 
 class NotificationSender:
-    """
-    Sends notifications to users via Notification Service.
-    """
+    """Sends notifications to users via Notification Service."""
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize the NotificationSender."""
         self.notification_service_url = settings.NOTIFICATION_SERVICE_URL
 
-    def send_achievement_notification(
-        self,
-        user_id: int,
-        achievement_name: str,
-        description: str,
-    ):
+    def send_achievement_notification(self, user_id: int, achievement_name: str, description: str) -> None:
         """
         Send notification about achievement unlock.
 
@@ -44,12 +36,7 @@ class NotificationSender:
 
         self._send_notification(payload)
 
-    def send_progress_notification(
-        self,
-        user_id: int,
-        achievement_name: str,
-        progress: float,
-    ):
+    def send_progress_notification(self, user_id: int, achievement_name: str, progress: float) -> None:
         """
         Send notification about progress update.
 
@@ -71,14 +58,7 @@ class NotificationSender:
 
         self._send_notification(payload)
 
-    def _build_notification_payload(
-        self,
-        user_id: int,
-        title: str,
-        body: str,
-        notification_type: str,
-        extra_data: dict = None,
-    ) -> dict:
+    def _build_notification_payload(self, user_id: int, title: str, body: str, notification_type: str, extra_data: dict | None = None) -> dict:
         """
         Build notification payload.
 
@@ -101,7 +81,7 @@ class NotificationSender:
             "data": extra_data or {},
         }
 
-    def _send_notification(self, payload: dict):
+    def _send_notification(self, payload: dict) -> None:
         """
         Send notification to Notification Service.
 

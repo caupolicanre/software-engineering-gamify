@@ -79,7 +79,7 @@ class Achievement(models.Model):
         """
         return f"{self.name} ({self.get_rarity_display()})"
 
-    def is_unlockable_by(self, user_id) -> bool:
+    def is_unlockable_by(self, user_id: int) -> bool:
         """
         Check if this achievement can be unlocked by a user.
 

@@ -1,9 +1,15 @@
+"""User serializers."""
+
+from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
-from gamify.users.models import User
+
+User = get_user_model()
 
 
 class UserSerializer(serializers.ModelSerializer[User]):
+    """Serializer for User model."""
+
     class Meta:
         model = User
         fields = ["username", "name", "url"]
