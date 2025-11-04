@@ -3,10 +3,9 @@
 import logging
 
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import status, viewsets
+from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from apps.achievements.models import Achievement
@@ -39,7 +38,7 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Achievement.objects.all()
     serializer_class = AchievementSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ["rarity", "criteria_type", "is_active"]
     search_fields = ["name", "description"]
