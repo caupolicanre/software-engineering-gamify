@@ -1,9 +1,4 @@
-# =====================================
-# apps/achievements/managers/achievement_manager.py
-# =====================================
-"""
-Custom manager for Achievement model.
-"""
+"""Custom manager for Achievement model."""
 
 from django.db import models
 
@@ -11,11 +6,11 @@ from django.db import models
 class AchievementManager(models.Manager):
     """Custom manager for Achievement model with useful queries."""
 
-    def get_active_achievements(self):
+    def get_active_achievements(self) -> models.QuerySet:
         """Get all active achievements."""
         return self.filter(is_active=True)
 
-    def get_by_rarity(self, rarity):
+    def get_by_rarity(self, rarity) -> models.QuerySet:
         """
         Get achievements by rarity.
 
@@ -28,7 +23,7 @@ class AchievementManager(models.Manager):
         """
         return self.filter(rarity=rarity, is_active=True)
 
-    def get_by_criteria_type(self, criteria_type):
+    def get_by_criteria_type(self, criteria_type) -> models.QuerySet:
         """
         Get achievements by criteria type.
 
@@ -41,7 +36,7 @@ class AchievementManager(models.Manager):
         """
         return self.filter(criteria_type=criteria_type, is_active=True)
 
-    def search_by_name(self, query):
+    def search_by_name(self, query) -> models.QuerySet:
         """
         Search achievements by name.
 
@@ -55,19 +50,10 @@ class AchievementManager(models.Manager):
         return self.filter(name__icontains=query, is_active=True)
 
 
-# =====================================
-# apps/achievements/managers/user_achievement_manager.py
-# =====================================
-"""
-Custom manager for UserAchievement model.
-"""
-from django.db import models
-
-
 class UserAchievementManager(models.Manager):
     """Custom manager for UserAchievement model."""
 
-    def get_user_unlocked(self, user_id):
+    def get_user_unlocked(self, user_id) -> models.QuerySet:
         """
         Get all unlocked achievements for a user.
 
@@ -80,7 +66,7 @@ class UserAchievementManager(models.Manager):
         """
         return self.filter(user_id=user_id, is_completed=True).select_related("achievement")
 
-    def get_user_in_progress(self, user_id):
+    def get_user_in_progress(self, user_id) -> models.QuerySet:
         """
         Get achievements in progress for a user.
 
@@ -97,7 +83,7 @@ class UserAchievementManager(models.Manager):
             progress__gt=0,
         ).select_related("achievement")
 
-    def is_unlocked(self, user_id, achievement_id):
+    def is_unlocked(self, user_id, achievement_id) -> bool:
         """
         Check if a user has unlocked a specific achievement.
 
@@ -115,7 +101,7 @@ class UserAchievementManager(models.Manager):
             is_completed=True,
         ).exists()
 
-    def get_or_create_progress(self, user_id, achievement_id):
+    def get_or_create_progress(self, user_id, achievement_id) -> tuple:
         """
         Get or create a UserAchievement progress record.
 
@@ -133,7 +119,7 @@ class UserAchievementManager(models.Manager):
             defaults={"progress": 0.00, "is_completed": False},
         )
 
-    def bulk_update_progress(self, user_achievements):
+    def bulk_update_progress(self, user_achievements) -> int:
         """
         Bulk update progress for multiple user achievements.
 
