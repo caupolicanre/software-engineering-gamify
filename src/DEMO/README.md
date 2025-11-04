@@ -11,7 +11,8 @@ Aplicación Flask de demostración para el sistema de logros de Gamify. Permite 
 Asegúrate de que el servidor Django esté corriendo:
 
 ```bash
-# En una terminal, desde el directorio src/
+# En una terminal, desde el directorio raíz del proyecto
+cd src
 uv run python manage.py runserver
 ```
 
@@ -20,6 +21,7 @@ El servidor debe estar disponible en: `http://localhost:8000`
 ### Paso 2: Crear Datos de Prueba (si no lo has hecho)
 
 ```bash
+# Desde el directorio src/
 # Crear logros de ejemplo
 uv run python manage.py create_sample_achievements
 
@@ -29,9 +31,9 @@ uv run python manage.py create_test_user_stats --user-id 1
 
 ### Paso 3: Ejecutar la Demo Flask
 
-En otra terminal, desde el directorio `src/`:
-
 ```bash
+# En otra terminal, desde el directorio src/DEMO/
+cd DEMO
 uv run python demo_app.py
 ```
 
@@ -95,7 +97,7 @@ La aplicación estará disponible en: `http://localhost:5000`
 3. Verifica las barras de progreso de logros no desbloqueados
 4. Usa los filtros para ver solo bloqueados o desbloqueados
 
-### Escenario 3: Desbloqueo Manual (Testing)
+### Escenario 3: Desbloqueo
 
 1. Selecciona un logro bloqueado
 2. Haz clic en el botón **"Desbloquear"**
@@ -118,44 +120,7 @@ La demo consume estos endpoints de la API Django:
 
 - `GET /api/v1/achievements/` - Lista todos los logros
 - `GET /api/v1/achievements/all-progress/` - Progreso de logros del usuario
-- `POST /api/v1/achievements/unlock/` - Desbloquear logro manualmente
-
-## 🐛 Troubleshooting
-
-### La demo no carga los logros
-
-**Problema**: Aparece mensaje "Error al cargar logros"
-
-**Solución**:
-1. Verifica que Django esté corriendo en `http://localhost:8000`
-2. Prueba acceder a: `http://localhost:8000/api/v1/achievements/`
-3. Si da error 403, verifica que `AllowAny` esté configurado en settings
-
-### No se desbloquean logros al simular tareas
-
-**Problema**: Las tareas se completan pero no se desbloquean logros
-
-**Solución**:
-1. Verifica que los comandos de Django estén implementados
-2. Asegúrate de tener el superusuario creado (ID=1)
-3. Ejecuta: `python manage.py create_sample_achievements`
-
-### Error de CORS
-
-**Problema**: Error de CORS en la consola del navegador
-
-**Solución**:
-1. Verifica `CORS_ALLOWED_ORIGINS` en `settings/base.py`
-2. Añade `http://localhost:5000` si no está incluido
-3. Reinicia el servidor Django
-
-## 💡 Tips para la Demostración
-
-1. **Abre las DevTools** (F12) para ver las peticiones a la API
-2. **Usa valores pequeños** primero (1-10 tareas) para ver el flujo
-3. **Recarga frecuentemente** para ver actualizaciones en tiempo real
-4. **Experimenta con filtros** para mostrar diferentes vistas
-5. **Prueba el desbloqueo manual** para simular el flujo completo
+- `POST /api/v1/achievements/unlock/` - Desbloquear logro
 
 ## 🎓 Logros de Ejemplo Disponibles
 

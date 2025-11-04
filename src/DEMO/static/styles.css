@@ -1,0 +1,116 @@
+/* Gamify Demo - Custom Styles */
+
+/* General Layout */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.achievement-unlocked {
+    border: 3px solid #28a745;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.achievement-locked {
+    opacity: 0.7;
+    background: #f8f9fa;
+}
+
+/* Rarity Borders */
+.rarity-common {
+    border-left: 5px solid #6c757d;
+}
+
+.rarity-rare {
+    border-left: 5px solid #0dcaf0;
+}
+
+.rarity-epic {
+    border-left: 5px solid #6f42c1;
+}
+
+.rarity-legendary {
+    border-left: 5px solid #ffc107;
+}
+
+/* Stat Cards */
+.stat-card {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f83600 0%, #f9d423 100%);
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #a8caba 0%, #5d4157 100%);
+}
+
+/* Progress Bars */
+.progress {
+    height: 25px;
+    border-radius: 10px;
+}
+
+/* Badges */
+.badge-rarity {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Control Panel */
+.control-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Action Buttons */
+.btn-action {
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}

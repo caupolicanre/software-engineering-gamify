@@ -81,17 +81,13 @@ cd src
 uv run python manage.py runserver
 
 # Terminal 2: Iniciar Flask Demo (puerto 5000)
-cd src
+cd src/DEMO
 uv run python demo_app.py
-
-# O usar el script de inicio rápido en Windows:
-cd src
-start_demo.bat
 ```
 
 Luego abre en tu navegador: **http://localhost:5000**
 
-📖 **Ver documentación completa de la demo**: [DEMO_README.md](./src/DEMO_README.md)
+📖 **Ver documentación completa de la demo**: [DEMO/README.md](./src/DEMO/README.md)
 
 ## 📋 Estructura de Archivos Implementados
 

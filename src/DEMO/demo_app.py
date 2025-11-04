@@ -17,6 +17,12 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/static/<path:filename>")
+def static_files(filename):
+    """Servir archivos estáticos."""
+    return app.send_static_file(filename)
+
+
 @app.route("/api/achievements")
 def get_achievements():
     """Obtener todos los logros disponibles."""
