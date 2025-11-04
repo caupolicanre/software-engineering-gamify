@@ -9,7 +9,7 @@ from . import views
 app_name = "achievements"
 
 router = DefaultRouter()
-router.register(r"achievements", views.AchievementViewSet, basename="achievement")
+router.register(r"", views.AchievementViewSet, basename="achievement")
 
 urlpatterns = [
     path("", include(router.urls)),
