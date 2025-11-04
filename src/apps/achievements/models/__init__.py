@@ -240,4 +240,3 @@ class UserStatistics(models.Model):
         For now, it's a placeholder.
         """
         # TODO: Implement calls to external services
-        pass
