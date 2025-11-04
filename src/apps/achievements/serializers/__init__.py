@@ -125,7 +125,7 @@ class AchievementUnlockRequestSerializer(serializers.Serializer):
 
     achievement_id = serializers.UUIDField(required=True)
 
-    def validate_achievement_id(self, value: int) -> int:
+    def validate_achievement_id(self, value: str) -> str:
         """Validate achievement exists."""
         if not Achievement.objects.filter(id=value, is_active=True).exists():
             achievement_id_error = "Achievement does not exist or is not active"
