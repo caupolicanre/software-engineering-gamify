@@ -157,6 +157,9 @@ extend-select = [
     "TRY",      # Prevent Exception Handling AntiPatterns
 ]
 ignore = [
+    # flake8
+    "S101",     # assert
+
     # Annotations
     "ANN002",   # missing-type-args
     "ANN003",   # missing-type-kwargs
@@ -174,8 +177,12 @@ ignore = [
 
     # pydocstyle
     "D100",     # Missing docstring in public module
+    "D106",     # undocumented-public-nested-class
     "D212",     # Multi-line docstring summary should start at the first line
     "D413",
+
+    # Ruff
+    "RUF012",
 ]
 typing-extensions = false
 logger-objects = []
