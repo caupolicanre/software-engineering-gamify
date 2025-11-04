@@ -132,3 +132,35 @@ class AchievementUnlockRequestSerializer(serializers.Serializer):
             achievement_id_error = "Achievement does not exist or is not active"
             raise serializers.ValidationError(achievement_id_error)
         return value
+
+
+class SimulateTaskCompletionSerializer(serializers.Serializer):
+    """Serializer for simulating task completions."""
+
+    user_id = serializers.IntegerField(required=False, allow_null=True, help_text="Optional user ID for testing/demo purposes")
+    count = serializers.IntegerField(min_value=1, max_value=100, default=1, help_text="Number of tasks to simulate (1-100)")
+    update_streak = serializers.BooleanField(default=True, help_text="Whether to update the streak counter")
+
+    def validate_count(self, value: int) -> int:
+        """Validate count is within reasonable limits."""
+        if value < 1:
+            count_error = "Count must be at least 1"
+            raise serializers.ValidationError(count_error)
+        if value > 100:
+            count_error = "Count cannot exceed 100 tasks at once"
+            raise serializers.ValidationError(count_error)
+        return value
+
+
+class TaskSimulationResultSerializer(serializers.Serializer):
+    """Serializer for task simulation results."""
+
+    tasks_completed = serializers.IntegerField()
+    total_tasks_completed = serializers.IntegerField()
+    current_streak = serializers.IntegerField()
+    longest_streak = serializers.IntegerField()
+    current_level = serializers.IntegerField()
+    total_xp = serializers.IntegerField()
+    achievements_unlocked = serializers.IntegerField()
+    unlocked_achievements = serializers.ListField(child=serializers.DictField())
+    message = serializers.CharField()

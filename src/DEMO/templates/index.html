@@ -41,17 +41,20 @@
                 </div>
             </div>
             <div class="col-md-3 mb-3">
+                <div class="stat-card bg-gradient-purple">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3 class="mb-0">
+                        <span id="stat-level">1</span>
+                        <small class="text-muted" style="font-size: 0.5em;">(XP: <span id="stat-xp">0</span>)</small>
+                    </h3>
+                    <p class="mb-0">Nivel</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
                 <div class="stat-card bg-gradient-orange">
                     <i class="bi bi-trophy"></i>
                     <h3 class="mb-0" id="stat-achievements">0</h3>
                     <p class="mb-0">Logros Desbloqueados</p>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="stat-card bg-gradient-purple">
-                    <i class="bi bi-star-fill"></i>
-                    <h3 class="mb-0" id="stat-xp">0</h3>
-                    <p class="mb-0">XP Total</p>
                 </div>
             </div>
         </div>
@@ -170,8 +173,9 @@
 
                 document.getElementById('stat-tasks').textContent = stats.tasks_completed || 0;
                 document.getElementById('stat-streak').textContent = stats.current_streak || 0;
-                document.getElementById('stat-achievements').textContent = stats.achievements_unlocked || 0;
+                document.getElementById('stat-level').textContent = stats.current_level || 1;
                 document.getElementById('stat-xp').textContent = stats.total_xp || 0;
+                document.getElementById('stat-achievements').textContent = stats.achievements_unlocked || 0;
             } catch (error) {
                 console.error('Error loading user stats:', error);
             }
@@ -309,7 +313,7 @@
             }
 
             try {
-                showToast(`Simulando ${count} tareas...`, 'info');
+                showToast(`Simulando ${count} tarea${count > 1 ? 's' : ''}...`, 'info');
 
                 const response = await fetch('/api/simulate-task', {
                     method: 'POST',
@@ -320,16 +324,34 @@
                 const result = await response.json();
 
                 if (result.success) {
-                    showToast(`¡${count} tareas completadas! Revisa los logros actualizados`, 'success');
+                    // Mostrar mensaje de éxito con detalles
+                    const message = `¡${count} tarea${count > 1 ? 's' : ''} completada${count > 1 ? 's' : ''}! ` +
+                                  `Total: ${result.total_tasks_completed} | ` +
+                                  `Nivel: ${result.current_level} | ` +
+                                  `XP: ${result.total_xp}`;
+                    showToast(message, 'success');
 
-                    // Recargar datos después de 1 segundo
-                    setTimeout(() => loadData(), 1000);
+                    // Mostrar notificaciones de logros desbloqueados
+                    if (result.achievements_unlocked > 0) {
+                        setTimeout(() => {
+                            const achievementNames = result.unlocked_achievements
+                                .map(a => `🏆 ${a.name}`)
+                                .join(', ');
+                            showToast(
+                                `¡${result.achievements_unlocked} logro${result.achievements_unlocked > 1 ? 's' : ''} desbloqueado${result.achievements_unlocked > 1 ? 's' : ''}! ${achievementNames}`,
+                                'success'
+                            );
+                        }, 1000);
+                    }
+
+                    // Recargar datos después de 1.5 segundos
+                    setTimeout(() => loadData(), 1500);
                 } else {
-                    showToast('Error al simular tareas', 'danger');
+                    showToast(result.error || 'Error al simular tareas', 'danger');
                 }
             } catch (error) {
                 console.error('Error simulating tasks:', error);
-                showToast('Error al simular tareas', 'danger');
+                showToast('Error al simular tareas. Verifica que Django esté corriendo.', 'danger');
             }
         }
 

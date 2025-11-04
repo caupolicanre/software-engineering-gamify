@@ -13,10 +13,13 @@ from apps.achievements.serializers import (
     AchievementProgressSerializer,
     AchievementSerializer,
     AchievementUnlockRequestSerializer,
+    SimulateTaskCompletionSerializer,
+    TaskSimulationResultSerializer,
     UserAchievementListSerializer,
     UserAchievementSerializer,
 )
 from apps.achievements.services.achievement_service import AchievementService
+from apps.achievements.services.task_simulation_service import TaskSimulationService
 
 
 logger = logging.getLogger(__name__)
@@ -34,6 +37,8 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
         GET    /achievements/{id}/progress/ - Check progress for achievement
         POST   /achievements/unlock/        - Manually unlock achievement (dev/testing)
         GET    /achievements/all-progress/  - Get all progress for user
+        POST   /achievements/simulate-tasks/ - Simulate task completions
+        GET    /achievements/user-stats/    - Get user statistics
     """
 
     queryset = Achievement.objects.all()
@@ -49,6 +54,7 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
         """Initialize the viewset."""
         super().__init__(*args, **kwargs)
         self.achievement_service = AchievementService()
+        self.task_simulation_service = TaskSimulationService()
 
     def get_queryset(self):
         """Get queryset - only active achievements for non-staff."""
@@ -217,5 +223,109 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
             logger.exception("Error calculating all progress")
             return Response(
                 {"error": "Failed to calculate progress"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+    @action(detail=False, methods=["post"], url_path="simulate-tasks")
+    def simulate_task_completions(self, request) -> Response:
+        """
+        Simulate task completions for testing/demonstration purposes.
+
+        This endpoint simulates completing multiple tasks, which:
+        - Updates user statistics (tasks completed, streak, XP, level)
+        - Triggers achievement evaluation
+        - Returns all updated statistics and newly unlocked achievements
+
+        Request body:
+            {
+                "user_id": int (optional - if not provided, uses authenticated user),
+                "count": int (1-100, default: 1),
+                "update_streak": bool (default: true)
+            }
+
+        Returns:
+            Simulation results including updated statistics and unlocked achievements
+        """
+        serializer = SimulateTaskCompletionSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        # Get user_id from request body or authenticated user
+        user_id = serializer.validated_data.get("user_id")
+        if user_id is None:
+            if not request.user.is_authenticated:
+                return Response(
+                    {"error": "User not authenticated and no user_id provided"},
+                    status=status.HTTP_401_UNAUTHORIZED,
+                )
+            user_id = request.user.id
+
+        count = serializer.validated_data["count"]
+        update_streak = serializer.validated_data["update_streak"]
+
+        try:
+            # Simulate task completions
+            result = self.task_simulation_service.simulate_task_completions(
+                user_id=user_id,
+                count=count,
+                update_streak=update_streak,
+            )
+
+            # Serialize and return response
+            response_serializer = TaskSimulationResultSerializer(data=result)
+            response_serializer.is_valid(raise_exception=True)
+
+            return Response(
+                response_serializer.data,
+                status=status.HTTP_200_OK,
+            )
+
+        except ValueError as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        except Exception:
+            logger.exception("Error simulating task completions")
+            return Response(
+                {"error": "Failed to simulate task completions"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
+
+    @action(detail=False, methods=["get"], url_path="user-stats")
+    def get_user_stats(self, request) -> Response:
+        """
+        Get current statistics for a user.
+
+        Query params:
+            - user_id: int (optional - if not provided, uses authenticated user)
+
+        Returns:
+            User statistics including tasks completed, streak, level, XP, etc.
+        """
+        # Get user_id from query parameter or authenticated user
+        user_id = request.query_params.get("user_id")
+        if user_id:
+            user_id = int(user_id)
+        elif request.user.is_authenticated:
+            user_id = request.user.id
+        else:
+            return Response(
+                {"error": "User not authenticated and no user_id provided"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        try:
+            stats = self.task_simulation_service.get_user_statistics(user_id)
+            return Response(stats, status=status.HTTP_200_OK)
+
+        except ValueError as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        except Exception:
+            logger.exception("Error getting user statistics")
+            return Response(
+                {"error": "Failed to get user statistics"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )

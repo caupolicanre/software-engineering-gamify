@@ -54,44 +54,36 @@ def get_user_achievements():
 def get_user_stats():
     """Obtener estadísticas del usuario."""
     try:
-        # Obtener todos los logros con progreso del usuario
+        # Usar el nuevo endpoint de estadísticas
         response = requests.get(
+            f"{API_BASE_URL}/achievements/user-stats/",
+            params={"user_id": DEMO_USER_ID},
+            timeout=5,
+        )
+        response.raise_for_status()
+        stats = response.json()
+
+        # Contar logros desbloqueados
+        achievements_response = requests.get(
             f"{API_BASE_URL}/achievements/all-progress/",
             params={"user_id": DEMO_USER_ID},
             timeout=5,
         )
 
-        # Si falla, intentar endpoint alternativo
-        if response.status_code != 200:
-            response = requests.get(f"{API_BASE_URL}/achievements/", timeout=5)
-
-        response.raise_for_status()
-
-        # Retornar estadísticas basadas en logros desbloqueados
-        data = response.json()
         unlocked_count = 0
-        total_xp = 0
-        tasks_completed = 0
-
-        results = data.get("results", data) if isinstance(data, dict) else data
-
-        for achievement in results:
-            if achievement.get("is_unlocked"):
-                unlocked_count += 1
-                total_xp += achievement.get("reward_xp", 0)
-
-            # Obtener el máximo de tareas completadas del progreso
-            progress = achievement.get("progress", 0)
-            criteria_type = achievement.get("criteria", {}).get("type", "")
-            if criteria_type == "task_count" and progress > tasks_completed:
-                tasks_completed = progress
+        if achievements_response.status_code == 200:
+            achievements = achievements_response.json()
+            results = achievements.get("results", achievements) if isinstance(achievements, dict) else achievements
+            unlocked_count = sum(1 for ach in results if ach.get("is_unlocked"))
 
         return jsonify(
             {
-                "tasks_completed": tasks_completed,
-                "current_streak": 0,  # Se actualizará con rachas reales
+                "tasks_completed": stats.get("total_tasks_completed", 0),
+                "current_streak": stats.get("current_streak", 0),
+                "longest_streak": stats.get("longest_streak", 0),
+                "current_level": stats.get("current_level", 1),
                 "achievements_unlocked": unlocked_count,
-                "total_xp": total_xp,
+                "total_xp": stats.get("total_xp", 0),
             }
         )
     except requests.RequestException as e:
@@ -101,6 +93,8 @@ def get_user_stats():
                     "error": str(e),
                     "tasks_completed": 0,
                     "current_streak": 0,
+                    "longest_streak": 0,
+                    "current_level": 1,
                     "achievements_unlocked": 0,
                     "total_xp": 0,
                 }
@@ -111,24 +105,41 @@ def get_user_stats():
 
 @app.route("/api/simulate-task", methods=["POST"])
 def simulate_task():
-    """Simular la completación de tareas."""
+    """Simular la completación de tareas usando el nuevo endpoint."""
     try:
         data = request.get_json()
         task_count = data.get("count", 1)
 
-        # Llamar al comando de Django para simular tareas
-        # (Esto requeriría ejecutar el comando manage.py, lo simularemos con la API)
-
-        # Por ahora, retornamos éxito y el frontend consultará los logros actualizados
-        return jsonify(
-            {
-                "success": True,
-                "message": f"Simuladas {task_count} tareas completadas",
-                "tasks_completed": task_count,
-            }
+        # Usar el nuevo endpoint de simulación de tareas
+        response = requests.post(
+            f"{API_BASE_URL}/achievements/simulate-tasks/",
+            json={
+                "user_id": DEMO_USER_ID,
+                "count": task_count,
+                "update_streak": True,
+            },
+            timeout=10,
         )
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+
+        if response.status_code == 200:
+            result = response.json()
+            return jsonify(
+                {
+                    "success": True,
+                    "message": result.get("message", f"Simuladas {task_count} tareas"),
+                    "tasks_completed": result.get("tasks_completed", task_count),
+                    "total_tasks_completed": result.get("total_tasks_completed", 0),
+                    "current_streak": result.get("current_streak", 0),
+                    "current_level": result.get("current_level", 1),
+                    "total_xp": result.get("total_xp", 0),
+                    "achievements_unlocked": result.get("achievements_unlocked", 0),
+                    "unlocked_achievements": result.get("unlocked_achievements", []),
+                }
+            )
+        return jsonify({"success": False, "error": "Error al simular tareas"}), response.status_code
+
+    except requests.RequestException as e:
+        return jsonify({"error": str(e), "success": False}), 500
 
 
 @app.route("/api/unlock-achievement", methods=["POST"])
