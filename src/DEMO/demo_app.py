@@ -84,7 +84,7 @@ def get_user_stats():
                 "current_level": stats.get("current_level", 1),
                 "achievements_unlocked": unlocked_count,
                 "total_xp": stats.get("total_xp", 0),
-            }
+            },
         )
     except requests.RequestException as e:
         return (
@@ -97,7 +97,7 @@ def get_user_stats():
                     "current_level": 1,
                     "achievements_unlocked": 0,
                     "total_xp": 0,
-                }
+                },
             ),
             500,
         )
@@ -134,7 +134,7 @@ def simulate_task():
                     "total_xp": result.get("total_xp", 0),
                     "achievements_unlocked": result.get("achievements_unlocked", 0),
                     "unlocked_achievements": result.get("unlocked_achievements", []),
-                }
+                },
             )
         return jsonify({"success": False, "error": "Error al simular tareas"}), response.status_code
 

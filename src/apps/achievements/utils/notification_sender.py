@@ -2,8 +2,6 @@
 
 import logging
 
-from django.conf import settings
-
 
 logger = logging.getLogger(__name__)
 
@@ -60,7 +58,7 @@ class NotificationSender:
         self._send_notification(payload)
 
     def _build_notification_payload(
-        self, user_id: int, title: str, body: str, notification_type: str, extra_data: dict | None = None
+        self, user_id: int, title: str, body: str, notification_type: str, extra_data: dict | None = None,
     ) -> dict:
         """
         Build notification payload.
