@@ -15,12 +15,27 @@
 ## Tabla de Contenidos
 
 1. [Revisión Teórica](#1-revisión-teórica)
+   - 1.1. [¿Por qué los casos de uso son una buena base para diseñar pruebas funcionales?](#11-por-qué-los-casos-de-uso-son-una-buena-base-para-diseñar-pruebas-funcionales)
+   - 1.2. [Técnicas de diseño de pruebas aplicadas](#12-técnicas-de-diseño-de-pruebas-aplicadas)
+   - 1.3. [Niveles de prueba implementados](#13-niveles-de-prueba-implementados)
 2. [Casos de Uso Seleccionados](#2-casos-de-uso-seleccionados)
+   - 2.1. [Caso de Uso 1: Desbloquear un Logro](#21-caso-de-uso-1-desbloquear-un-logro)
+   - 2.2. [Caso de Uso 2: Consultar Progreso de Logros](#22-caso-de-uso-2-consultar-progreso-de-logros)
 3. [Diseño de Casos de Prueba](#3-diseño-de-casos-de-prueba)
+   - 3.1. [Casos de Prueba para "Desbloquear un Logro"](#31-casos-de-prueba-para-desbloquear-un-logro)
+   - 3.2. [Casos de Prueba para "Consultar Progreso de Logros"](#32-casos-de-prueba-para-consultar-progreso-de-logros)
+   - 3.3. [Casos de Prueba para API (Integración)](#33-casos-de-prueba-para-api-integración)
 4. [Clases de Equivalencia y Valores Límite](#4-clases-de-equivalencia-y-valores-límite)
+   - 4.1. [Campo: progress (Decimal, rango 0-100)](#41-campo-progress-decimal-rango-0-100)
+   - 4.2. [Campo: count (Integer, rango 1-100 en simulación)](#42-campo-count-integer-rango-1-100-en-simulación)
+   - 4.3. [Campo: reward_xp y reward_coins (Integer, ≥ 0)](#43-campo-reward_xp-y-reward_coins-integer--0)
+   - 4.4. [Campo: criteria (JSONField)](#44-campo-criteria-jsonfield)
 5. [Implementación de Pruebas](#5-implementación-de-pruebas)
-6. [Cobertura de Pruebas](#6-cobertura-de-pruebas)
-7. [Análisis de Resultados](#7-análisis-de-resultados)
+   - 5.1. [Estructura de Tests](#51-estructura-de-tests)
+6. [Análisis de Resultados](#6-análisis-de-resultados)
+   - 6.1. [Sobre el Diseño de Pruebas](#61-sobre-el-diseño-de-pruebas)
+   - 6.2. [Sobre los Casos de Uso](#62-sobre-los-casos-de-uso)
+   - 6.3. [Conclusiones Finales](#63-conclusiones-finales)
 
 ---
 
@@ -599,17 +614,14 @@ src/apps/achievements/tests/
 
 ### 6.1. Sobre el Diseño de Pruebas
 
-**✅ :**
+**✅ Puntos Positivos:**
 1. **Partición por clases de equivalencia** permitió identificar casos límite tempranamente
 2. **Fixtures reutilizables** aceleraron significativamente el desarrollo de tests
-3. **Tests de API completos** ayudaron a encontrar bugs de integración
-4. **Cobertura como métrica** guió hacia áreas sin probar
 
 **⚠️ Desafíos encontrados:**
 1. **Tests asíncronos complejos** para event handlers requieren más infraestructura
 2. **Mocking de dependencias externas** puede ser complicado
 3. **Balance entre tests unitarios e integración** requiere decisiones conscientes
-4. **Tiempo de ejecución** aumenta con cantidad de tests de BD
 
 ### 6.2. Sobre los Casos de Uso
 
