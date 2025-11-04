@@ -124,6 +124,7 @@ class AchievementUnlockRequestSerializer(serializers.Serializer):
     """Serializer for achievement unlock request."""
 
     achievement_id = serializers.UUIDField(required=True)
+    user_id = serializers.IntegerField(required=False, allow_null=True, help_text="Optional user ID for testing/demo purposes")
 
     def validate_achievement_id(self, value: str) -> str:
         """Validate achievement exists."""

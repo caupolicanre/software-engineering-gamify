@@ -143,7 +143,8 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
 
         Request body:
             {
-                "achievement_id": "uuid"
+                "achievement_id": "uuid",
+                "user_id": int (optional - if not provided, uses authenticated user)
             }
 
         Returns:
@@ -152,7 +153,16 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
         serializer = AchievementUnlockRequestSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        user_id = request.user.id
+        # Try to get user_id from request body first, then fall back to authenticated user
+        user_id = serializer.validated_data.get("user_id")
+        if user_id is None:
+            if not request.user.is_authenticated:
+                return Response(
+                    {"error": "User not authenticated and no user_id provided"},
+                    status=status.HTTP_401_UNAUTHORIZED,
+                )
+            user_id = request.user.id
+
         achievement_id = serializer.validated_data["achievement_id"]
 
         try:
@@ -187,7 +197,17 @@ class AchievementViewSet(viewsets.ReadOnlyModelViewSet):
         Returns:
             List of progress data for all achievements
         """
-        user_id = request.user.id
+        # Try to get user_id from query parameter first, then fall back to authenticated user
+        user_id = request.query_params.get("user_id")
+        if user_id:
+            user_id = int(user_id)
+        elif request.user.is_authenticated:
+            user_id = request.user.id
+        else:
+            return Response(
+                {"error": "User not authenticated and no user_id provided"},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
 
         try:
             progress_list = self.achievement_service.calculate_all_progress(user_id)

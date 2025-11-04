@@ -2,6 +2,7 @@
 
 import logging
 
+from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils import timezone
 
@@ -12,6 +13,7 @@ from apps.achievements.utils.notification_sender import NotificationSender
 from apps.achievements.utils.validators import AchievementValidator
 
 
+User = get_user_model()
 logger = logging.getLogger(__name__)
 
 
@@ -39,7 +41,7 @@ class AchievementService:
         self,
         user_id: int,
         event_type: str,
-        _event_data: dict,
+        event_data: dict,
     ) -> list[UserAchievement]:
         """
         Check all achievements and unlock those whose criteria are met.
@@ -47,20 +49,21 @@ class AchievementService:
         Args:
             user_id: User ID
             event_type: Type of event that triggered this check (e.g., 'task_completed')
-            _event_data: Event data containing relevant information (reserved for future use)
+            event_data: Event data containing relevant information
 
         Returns:
             List of newly unlocked UserAchievement instances
 
         """
-        logger.info("Checking achievements for user %s after event %s", user_id, event_type)
+        logger.info("Checking achievements for user %s after event %s (event_data: %s)", user_id, event_type, event_data)
 
         # Get user statistics
         try:
             user_stats = UserStatistics.objects.get(user_id=user_id)
         except UserStatistics.DoesNotExist:
             logger.warning("User statistics not found for user %s. Creating default", user_id)
-            user_stats = UserStatistics.objects.create(user_id=user_id)
+            user = User.objects.get(id=user_id)
+            user_stats = UserStatistics.objects.create(user=user)
 
         # Get relevant achievements based on event type
         achievements = self._get_relevant_achievements(event_type)
@@ -74,14 +77,18 @@ class AchievementService:
                 continue
 
             # Evaluate criteria
+            logger.debug("Evaluating achievement %s (%s) for user %s", achievement.name, achievement.id, user_id)
             criteria_met = self.evaluator.evaluate_criteria(
                 user_id,
                 achievement,
                 user_stats,
             )
 
+            logger.debug("Criteria met for achievement %s: %s", achievement.name, criteria_met)
+
             if criteria_met:
                 # Unlock achievement
+                logger.info("Unlocking achievement %s for user %s", achievement.name, user_id)
                 user_achievement = self.unlock_achievement(user_id, achievement.id)
                 newly_unlocked.append(user_achievement)
             else:
@@ -91,6 +98,7 @@ class AchievementService:
                     achievement,
                     user_stats,
                 )
+                logger.debug("Updating progress for achievement %s: %s%%", achievement.name, progress)
                 self._update_progress(user_id, achievement.id, progress)
 
         logger.info("Unlocked %d achievements for user %s", len(newly_unlocked), user_id)
@@ -118,7 +126,14 @@ class AchievementService:
         """
         logger.info("Unlocking achievement %s for user %s", achievement_id, user_id)
 
-        # Validate
+        # Validate user exists
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist as exc:
+            msg = f"User {user_id} does not exist"
+            raise ValueError(msg) from exc
+
+        # Validate achievement
         if not self.validator.validate_achievement_exists(achievement_id):
             msg = f"Achievement {achievement_id} does not exist"
             raise ValueError(msg)
@@ -132,8 +147,8 @@ class AchievementService:
 
         # Create or update user achievement
         user_achievement, created = UserAchievement.objects.get_or_create(
-            user_id=user_id,
-            achievement_id=achievement_id,
+            user=user,
+            achievement=achievement,
             defaults={
                 "progress": 100.00,
                 "is_completed": True,
@@ -252,29 +267,91 @@ class AchievementService:
             user_id: User ID
 
         Returns:
-            List of progress dictionaries
+            List of progress dictionaries with full achievement details
 
         """
         try:
             user_stats = UserStatistics.objects.get(user_id=user_id)
         except UserStatistics.DoesNotExist:
-            user_stats = UserStatistics.objects.create(user_id=user_id)
+            # Get User instance and create statistics
+            user = User.objects.get(id=user_id)
+            user_stats = UserStatistics.objects.create(user=user)
 
         achievements = Achievement.objects.get_active_achievements()
+
+        # Get all user achievements to check unlock status
+        user_achievements = {
+            ua.achievement_id: ua
+            for ua in UserAchievement.objects.filter(user_id=user_id)
+        }
+
         result = []
 
         for achievement in achievements:
-            progress = self.evaluator.calculate_progress(user_id, achievement, user_stats)
+            # Check if unlocked
+            user_achievement = user_achievements.get(achievement.id)
+            is_unlocked = user_achievement.is_completed if user_achievement else False
+            unlocked_at = user_achievement.unlocked_at if user_achievement and user_achievement.unlocked_at else None
+
+            # Get current and target values based on criteria type
+            current_value, target_value = self._get_progress_values(achievement, user_stats)
+
+            if is_unlocked:
+                progress_percentage = 100.0
+                current_value = target_value
+            else:
+                progress_percentage = self.evaluator.calculate_progress(user_id, achievement, user_stats)
+
+            # Ensure criteria has target field for frontend
+            criteria = achievement.criteria.copy() if achievement.criteria else {}
+            if "target" not in criteria:
+                criteria["target"] = target_value
+
             result.append(
                 {
-                    "achievement_id": str(achievement.id),
-                    "achievement_name": achievement.name,
-                    "progress_percentage": float(progress),
+                    "id": str(achievement.id),
+                    "name": achievement.name,
+                    "description": achievement.description,
+                    "criteria": criteria,
                     "criteria_type": achievement.criteria_type,
+                    "reward_xp": achievement.reward_xp,
+                    "reward_coins": achievement.reward_coins,
+                    "icon": achievement.icon,
+                    "rarity": achievement.rarity,
+                    "progress": current_value,
+                    "progress_percentage": float(progress_percentage),
+                    "is_unlocked": is_unlocked,
+                    "unlocked_at": unlocked_at.isoformat() if unlocked_at else None,
                 },
             )
 
         return result
+
+    def _get_progress_values(self, achievement: Achievement, user_stats: UserStatistics) -> tuple[int, int]:
+        """
+        Extract current and target values based on criteria type.
+
+        Args:
+            achievement: Achievement instance
+            user_stats: User statistics
+
+        Returns:
+            Tuple of (current_value, target_value)
+        """
+        criteria = achievement.criteria or {}
+        criteria_type = achievement.criteria_type
+
+        if criteria_type == Achievement.CriteriaType.TASK_COUNT:
+            return user_stats.total_tasks_completed, criteria.get("required_count", 0)
+        if criteria_type == Achievement.CriteriaType.STREAK:
+            return user_stats.current_streak, criteria.get("required_days", 0)
+        if criteria_type == Achievement.CriteriaType.LEVEL:
+            return user_stats.current_level, criteria.get("required_level", 0)
+        if criteria_type == Achievement.CriteriaType.FRIEND_COUNT:
+            return user_stats.friend_count, criteria.get("required_count", 0)
+        if criteria_type == Achievement.CriteriaType.CHALLENGE:
+            return user_stats.challenges_won, criteria.get("required_wins", 0)
+        return 0, 100
 
     # Private helper methods
 

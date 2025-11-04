@@ -1,6 +1,10 @@
 """Custom manager for Achievement model."""
 
+from django.contrib.auth import get_user_model
 from django.db import models
+
+
+User = get_user_model()
 
 
 class AchievementManager(models.Manager):
@@ -101,21 +105,27 @@ class UserAchievementManager(models.Manager):
             is_completed=True,
         ).exists()
 
-    def get_or_create_progress(self, user_id: int, achievement_id: int) -> tuple:
+    def get_or_create_progress(self, user_id: int, achievement_id: str) -> tuple:
         """
         Get or create a UserAchievement progress record.
 
         Args:
             user_id: User ID
-            achievement_id: Achievement ID
+            achievement_id: Achievement ID (UUID as string)
 
         Returns:
             Tuple (UserAchievement instance, created boolean)
 
         """
+        # Import here to avoid circular imports
+        from apps.achievements.models import Achievement  # noqa: PLC0415
+
+        user = User.objects.get(id=user_id)
+        achievement = Achievement.objects.get(id=achievement_id)
+
         return self.get_or_create(
-            user_id=user_id,
-            achievement_id=achievement_id,
+            user=user,
+            achievement=achievement,
             defaults={"progress": 0.00, "is_completed": False},
         )
 
