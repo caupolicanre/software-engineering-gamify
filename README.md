@@ -12,6 +12,7 @@
 
 ## Contenido principal del repositorio
 - [Documentación](./docs/)
+  - [TP4: Diseño de Casos de Prueba](./docs/practical_work/TP4_test_cases_design.md)
 - [Código fuente](./src/)
 - [Pruebas](./src/apps/achievements/tests/)
 - [Recursos](./resources/)
@@ -56,13 +57,13 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
 python manage.py migrate
 ```
 
-### 5. Crear Superusuario
+### 3. Crear Superusuario
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 6. Cargar Datos de Ejemplo
+### 4. Cargar Datos de Ejemplo
 
 ```bash
 # Crear logros de ejemplo
@@ -72,7 +73,7 @@ python manage.py create_sample_achievements
 python manage.py create_test_user_stats --user-id 1
 ```
 
-### 7. 🎮 Ejecutar Demo Interactiva (Flask)
+### 5. 🎮 Ejecutar Demo Interactiva (Flask)
 
 Para probar el sistema de logros con una interfaz visual:
 
@@ -131,72 +132,6 @@ apps/achievements/
 ├── __init__.py
 ├── admin.py                        # ✅ Admin configurado
 └── apps.py
-```
-
-## 🧪 Testing del Flujo Completo
-
-### Caso de Uso: "Desbloquear un logro"
-
-#### 1. Iniciar el servidor
-
-```bash
-python manage.py runserver
-```
-
-#### 2. Simular completación de tareas
-
-```bash
-# Simular 1 tarea completada (desbloqueará "First Steps")
-python manage.py simulate_task_completion --user-id 1 --count 1
-
-# Simular 10 tareas (desbloqueará "Task Master")
-python manage.py simulate_task_completion --user-id 1 --count 10
-
-# Simular 100 tareas (desbloqueará "Century Club")
-python manage.py simulate_task_completion --user-id 1 --count 100
-```
-
-#### 3. Ver logros desbloqueados
-
-**Opción A: Via API**
-
-```bash
-# Primero obtener token de autenticación
-# (Asumiendo que tienes DRF Token Auth o similar configurado)
-
-# Listar todos los logros
-curl http://localhost:8000/api/v1/achievements/
-
-# Ver logros del usuario autenticado
-curl -H "Authorization: Token YOUR_TOKEN" \
-  http://localhost:8000/api/v1/achievements/me/
-
-# Ver logros bloqueados también
-curl -H "Authorization: Token YOUR_TOKEN" \
-  http://localhost:8000/api/v1/achievements/me/?include_locked=true
-
-# Ver progreso de un logro específico
-curl http://localhost:8000/api/v1/achievements/{achievement-id}/progress/
-
-# Ver progreso de todos los logros
-curl -H "Authorization: Token YOUR_TOKEN" \
-  http://localhost:8000/api/v1/achievements/all-progress/
-```
-
-**Opción B: Via Django Admin**
-
-1. Ir a http://localhost:8000/admin/
-2. Login con superusuario
-3. Ver "User achievements" para ver los logros desbloqueados
-
-#### 4. Desbloquear manualmente (testing)
-
-```bash
-curl -X POST \
-  -H "Authorization: Token YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"achievement_id": "uuid-del-logro"}' \
-  http://localhost:8000/api/v1/achievements/unlock/
 ```
 
 ## 📡 Endpoints API Disponibles
