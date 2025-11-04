@@ -5,6 +5,9 @@ from pathlib import Path
 from decouple import config
 
 
+# Alias config as env for consistency across settings files
+env = config
+
 # Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -64,6 +67,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    "apps.users",
     "apps.achievements",
     "apps.xp_management",
     "apps.streaks",

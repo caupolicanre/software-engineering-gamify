@@ -1,5 +1,5 @@
-from .base import *  # noqa: F403
-from .base import DATABASES, INSTALLED_APPS, REDIS_URL, SPECTACULAR_SETTINGS, env
+from .base import *
+from .base import DATABASES, INSTALLED_APPS, SPECTACULAR_SETTINGS, env
 
 
 # GENERAL
@@ -15,18 +15,18 @@ DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)
 
 # CACHES
 # ------------------------------------------------------------------------------
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": REDIS_URL,
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            # Mimicking memcache behavior.
-            # https://github.com/jazzband/django-redis#memcached-exceptions-behavior
-            "IGNORE_EXCEPTIONS": True,
-        },
-    },
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": REDIS_URL,
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#             # Mimicking memcache behavior.
+#             # https://github.com/jazzband/django-redis#memcached-exceptions-behavior
+#             "IGNORE_EXCEPTIONS": True,
+#         },
+#     },
+# }
 
 # SECURITY
 # ------------------------------------------------------------------------------
@@ -168,7 +168,5 @@ LOGGING = {
 # -------------------------------------------------------------------------------
 # Tools that generate code samples can use SERVERS to point to the correct domain
 SPECTACULAR_SETTINGS["SERVERS"] = [
-    {"url": "https://https://github.com/caupolicanre/software-engineering-gamify", "description": "Production server"},
+    {"url": "", "description": "Production server"},
 ]
-# Your stuff...
-# ------------------------------------------------------------------------------
