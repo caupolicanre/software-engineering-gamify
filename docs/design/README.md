@@ -7,6 +7,7 @@ Este módulo contiene todos los **artefactos de diseño** del sistema, incluyend
 - [**Documentación completa de diseño**](./design_documentation.md): Guía completa sobre arquitectura, diagramas de clases, despliegue y trazabilidad.
 - [**Diagramas**](./diagrams/): Diagramas del sistema (dominio, casos de uso, secuencia, C4).
 - [**Trabajos prácticos**](../practical_work/): Documentación detallada de los trabajos prácticos realizados.
+- [**TP4: Diseño de Casos de Prueba**](../practical_work/TP4_test_cases_design.md): Casos de prueba basados en casos de uso.
 
 ## Diagramas
 

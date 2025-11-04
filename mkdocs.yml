@@ -20,6 +20,7 @@ nav:
       - TP1 Parte 2 - Aplicación de arquitectura: practical_work/TP1_part2_apply_architecture.md
       - TP2 - Diagramas de secuencia: practical_work/TP2_sequence_diagram.md
       - TP3 - Diagramas de clases y despliegue: practical_work/TP3_class_deployment_diagrams.md
+      - TP4 - Diseño de casos de prueba: practical_work/TP4_test_cases_design.md
   - Requerimientos:
       - Visión general: requirements/README.md
   - Especificaciones:
