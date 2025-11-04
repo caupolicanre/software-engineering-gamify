@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="s5Segl8r4ABsaejC-cq_" name="C4 - Context">
-        <mxGraphModel dx="1071" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1042" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -352,11 +352,11 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <object placeholders="1" c4Name="Gamification System" c4Type="SystemScopeBoundary" c4Application="Gamification" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="CPNvaI_-VzcBvVuSUvID-1">
-                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#b1ddf0;strokeColor=#10739e;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" vertex="1" parent="1">
+                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#b1ddf0;strokeColor=#10739e;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" parent="1" vertex="1">
                         <mxGeometry x="130" y="20" width="1880" height="1760" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-18" value="Requests for task&#xa;management, profile, and social&#xa;[HTTPS/REST]" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-6" target="mu2MWL9LL1KbobUQlmV0-8">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-18" value="Requests for task&#xa;management, profile, and social&#xa;[HTTPS/REST]" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-6" target="mu2MWL9LL1KbobUQlmV0-8" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1730" y="219.0000000000001" as="sourcePoint"/>
@@ -364,7 +364,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-19" value="Validates authentication with&#xa;[HTTPS/OAuth2]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-2">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-19" value="Validates authentication with&#xa;[HTTPS/OAuth2]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-2" edge="1">
                     <mxGeometry x="-0.0891" relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1859.9999999999995" y="527.3400000000001" as="sourcePoint"/>
@@ -372,7 +372,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-20" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-7">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-20" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-7" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1820" y="400"/>
@@ -382,7 +382,7 @@
                         <mxPoint x="2192" y="777" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-21" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-11">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-21" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-11" edge="1">
                     <mxGeometry x="0.1011" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1130" y="570"/>
@@ -392,7 +392,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-22" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-12">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-22" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-12" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1010" y="570"/>
@@ -402,7 +402,7 @@
                         <mxPoint x="810" y="630" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-23" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-13">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-23" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-13" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="320" y="400"/>
@@ -411,7 +411,7 @@
                         <mxPoint x="485" y="680" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-24" value="Read/Write cache&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-10">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-24" value="Read/Write cache&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-8" target="mu2MWL9LL1KbobUQlmV0-10" edge="1">
                     <mxGeometry x="-0.5405" relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1711.8000000000002" y="645" as="sourcePoint"/>
@@ -419,7 +419,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-25" value="Publish events&#xa;(TaskCompleted, TaskCreated)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.175;entryY=0.021;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-5">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-25" value="Publish events&#xa;(TaskCompleted, TaskCreated)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.175;entryY=0.021;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-5" edge="1">
                     <mxGeometry x="-0.7337" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1880" y="1310"/>
@@ -431,7 +431,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-26" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.722;entryY=0.014;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-4">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-26" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.722;entryY=0.014;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-4" edge="1">
                     <mxGeometry x="-0.7756" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1760" y="1100"/>
@@ -442,7 +442,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-27" value="Read/Write cache&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.937;entryY=0.07;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-10">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-27" value="Read/Write cache&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.937;entryY=0.07;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-10" edge="1">
                     <mxGeometry x="-0.8199" y="-4" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1550" y="774"/>
@@ -454,7 +454,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-28" value="Publish events&#xa;(XPGained,&#xa;AchievementUnlocked)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-5">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-28" value="Publish events&#xa;(XPGained,&#xa;AchievementUnlocked)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-5" edge="1">
                     <mxGeometry x="-0.5084" y="-10" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1318" y="1040"/>
@@ -467,7 +467,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-29" value="Subscribe to events&#xa;(TaskCompleted)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-5">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-29" value="Subscribe to events&#xa;(TaskCompleted)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-5" edge="1">
                     <mxGeometry x="-0.809" y="1" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1258" y="940"/>
@@ -480,7 +480,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-30" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.326;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-4">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-30" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.326;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-4" edge="1">
                     <mxGeometry x="-0.5337" y="2" relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1287.9548872180449" y="792" as="sourcePoint"/>
@@ -488,7 +488,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-31" value="Cache rankings&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.761;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-10">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-31" value="Cache rankings&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.761;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="mu2MWL9LL1KbobUQlmV0-10" edge="1">
                     <mxGeometry x="-0.1937" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1134" y="774"/>
@@ -498,7 +498,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-32" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.696;entryY=0.008;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-12" target="mu2MWL9LL1KbobUQlmV0-3">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-32" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.696;entryY=0.008;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-12" target="mu2MWL9LL1KbobUQlmV0-3" edge="1">
                     <mxGeometry x="-0.6" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="820" y="880"/>
@@ -510,7 +510,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-33" value="Publish events&#xa;(ProfileUpdated)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-12" target="mu2MWL9LL1KbobUQlmV0-5">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-33" value="Publish events&#xa;(ProfileUpdated)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-12" target="mu2MWL9LL1KbobUQlmV0-5" edge="1">
                     <mxGeometry x="-0.4674" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="880" y="1310"/>
@@ -521,7 +521,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-34" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-13">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-34" value="Read/Write data&#xa;[SQL/TCP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-13" edge="1">
                     <mxGeometry x="-0.3163" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="320" y="960"/>
@@ -532,7 +532,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-35" value="Check rankings at&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.253;entryY=0.025;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-13" target="mu2MWL9LL1KbobUQlmV0-10">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-35" value="Check rankings at&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.253;entryY=0.025;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-13" target="mu2MWL9LL1KbobUQlmV0-10" edge="1">
                     <mxGeometry x="-0.5505" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="380" y="920"/>
@@ -543,7 +543,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-36" value="Publish events&#xa;(FriendAdded)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.161;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-13" target="mu2MWL9LL1KbobUQlmV0-5">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-36" value="Publish events&#xa;(FriendAdded)&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.161;entryY=0.986;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-13" target="mu2MWL9LL1KbobUQlmV0-5" edge="1">
                     <mxGeometry x="-0.718" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="260" y="1310"/>
@@ -555,7 +555,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-37" value="Deliver events to&#xa;[AMQP]" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-5" target="eX_IZU3V5GLsj19r9tWV-42">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-37" value="Deliver events to&#xa;[AMQP]" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-5" target="eX_IZU3V5GLsj19r9tWV-42" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="632.9999999999998" y="1279.0000000000002" as="sourcePoint"/>
@@ -563,7 +563,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-38" value="Send notifications&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-43">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-38" value="Send notifications&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-43" edge="1">
                     <mxGeometry x="0.7926" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="726.5" y="1700"/>
@@ -573,7 +573,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-39" value="Send emails&#xa;[SMTP/HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-44">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-39" value="Send emails&#xa;[SMTP/HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-44" edge="1">
                     <mxGeometry x="0.3115" relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1470.3000000000002" y="1784" as="sourcePoint"/>
@@ -581,7 +581,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-40" value="Send SMS&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-47">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-40" value="Send SMS&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="eX_IZU3V5GLsj19r9tWV-42" target="eX_IZU3V5GLsj19r9tWV-47" edge="1">
                     <mxGeometry x="0.7946" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1416.5" y="1700"/>
@@ -591,7 +591,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eX_IZU3V5GLsj19r9tWV-41" value="Synchronize events&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-1">
+                <mxCell id="eX_IZU3V5GLsj19r9tWV-41" value="Synchronize events&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-7" target="mu2MWL9LL1KbobUQlmV0-1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="2322" y="864" as="sourcePoint"/>
@@ -599,91 +599,91 @@
                     </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="Notification Service" c4Type="Container" c4Technology="UV, Python, Celery" c4Description="Processes and send push notifications, emails, SMS messages, and reminders" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="eX_IZU3V5GLsj19r9tWV-42">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="949.5" y="1640" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Push Notification Provider" c4Type="External System: Firebase, APNS" c4Description="Mobile device notification system" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="eX_IZU3V5GLsj19r9tWV-43">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="606.5" y="1882" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Email Service" c4Type="External System: SendGrid, AWS SES" c4Description="Mailing system" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="eX_IZU3V5GLsj19r9tWV-44">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="949.5" y="1882" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="SMS Service" c4Type="External System: Twilio, WhatsApp API" c4Description="Messenger service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="eX_IZU3V5GLsj19r9tWV-47">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="1296.5" y="1882" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Calendar Service" c4Type="External System: Google Calendar, Outlook" c4Description="External Calendar service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-1">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="2200" y="684" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Authentication Service" c4Type="External System: Google, Facebook, Apple" c4Description="Authentication service with third-party systems" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-2">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="2200" y="310" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="User Database" c4Type="Container" c4Technology="PostgreSQL" c4Description="Stores users, social relationships" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-3">
-                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="600" y="1130" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Gamification Database" c4Type="Container" c4Technology="PostgreSQL" c4Description="Stores XP, achievements, tasks, streaks,&#xa;rewards, and statistics" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-4">
-                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="1300" y="1130" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Message Queue" c4Type="Container" c4Technology="RabbitMQ/Redis" c4Description="Message queue for asynchronous events between services" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-5">
-                    <mxCell style="shape=cylinder3;size=15;direction=south;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+                    <mxCell style="shape=cylinder3;size=15;direction=south;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="950" y="1410" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
-                <object placeholders="1" c4Name="Frontend Web App" c4Type="Container" c4Technology="Python, Flask" c4Description="Web interface for task management&#xa;and gamification" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-6">
-                    <mxCell style="shape=mxgraph.c4.webBrowserContainer2;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;strokeColor=#118ACD;fillColor=#23A2D9;strokeColor=#118ACD;strokeColor2=#0E7DAD;fontSize=12;fontColor=#ffffff;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+                <object placeholders="1" c4Name="Frontend Web App" c4Type="Container" c4Technology="React, TypeScript, Vite" c4Description="Web interface for task management&#xa;and gamification" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-6">
+                    <mxCell style="shape=mxgraph.c4.webBrowserContainer2;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;strokeColor=#118ACD;fillColor=#23A2D9;strokeColor=#118ACD;strokeColor2=#0E7DAD;fontSize=12;fontColor=#ffffff;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="950" y="50" width="240" height="160" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Task Management Service" c4Type="Container" c4Technology="UV, Python, Django, Django REST framework" c4Description="Manages tasks, recurrences, deadlines, and categories" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-7">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="1700" y="684" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="API Gateway" c4Type="Container" c4Technology="UV, Python, FastAPI, Redis" c4Description="Performs parameter validations, along with&#xa;the discovery of the service to be used.&#xa;It also handles authentication, authorization,&#xa;limitations, dynamic routing, and caching" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-8">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="950" y="310" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Redis Cache" c4Type="Container" c4Technology="Redis Cluster" c4Description="Distributed cache for sessions, rankings, and frequent data" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-10">
-                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="1">
+                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="951.5" y="1130" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Gamification Service" c4Type="Container" c4Technology="UV, Python, Django, Django REST Framework" c4Description="REST API with business logic. Manages statistics, rankings, and achievements engine." label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-11">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="1198" y="684" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="User Management Service" c4Type="Container" c4Technology="UV, Python, Django, Django REST Framework" c4Description="Manages user profiles, statistics, and preferences" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-12">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="700" y="684" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Social Service" c4Type="Container" c4Technology="UV, Python, Django, Django REST Framework" c4Description="Manages friends, rankings, competitions, and collaborations" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="mu2MWL9LL1KbobUQlmV0-13">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="200" y="684" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Rewards Service" c4Type="External System: Tillo" c4Description="Gift card rewards service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="CPNvaI_-VzcBvVuSUvID-2">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="1" vertex="1">
                         <mxGeometry x="2200" y="1060" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="CPNvaI_-VzcBvVuSUvID-3" value="Claim rewards&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="CPNvaI_-VzcBvVuSUvID-2">
+                <mxCell id="CPNvaI_-VzcBvVuSUvID-3" value="Claim rewards&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mu2MWL9LL1KbobUQlmV0-11" target="CPNvaI_-VzcBvVuSUvID-2" edge="1">
                     <mxGeometry x="-0.7329" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1480" y="774"/>
@@ -700,21 +700,21 @@
         </mxGraphModel>
     </diagram>
     <diagram name="C4 - Components (Gamification Service)" id="ITpaCYDZfCnG2Dpu6qd_">
-        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="7270" dy="6809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="BPq8q6HqY7CyKOnif9jm-0"/>
                 <mxCell id="BPq8q6HqY7CyKOnif9jm-1" parent="BPq8q6HqY7CyKOnif9jm-0"/>
                 <object placeholders="1" c4Name="Gamification System" c4Type="SystemScopeBoundary" c4Application="Gamification" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="pfidwgQ3fRVtUzqqCwdB-0">
-                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#b1ddf0;strokeColor=#10739e;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#b1ddf0;strokeColor=#10739e;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="60" y="-100" width="2660" height="1800" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Gamification Service" c4Type="ContainerScopeBoundary" c4Application="Container" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="6sWLcBvxcGRI0jUNyLtS-0">
-                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fad9d5;strokeColor=#ae4132;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fad9d5;strokeColor=#ae4132;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=0;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];opacity=25;movable=0;resizable=0;deletable=0;locked=1;strokeWidth=5;" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="120" y="200" width="2570" height="920" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-13" value="Read/Write XP using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-13" value="Read/Write XP using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.7838" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1650" y="690"/>
@@ -725,7 +725,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-14" value="Cache level data in&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="CoZUd1VCx1SM3nCAQ--e-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-14" value="Cache level data in&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="CoZUd1VCx1SM3nCAQ--e-0" edge="1">
                     <mxGeometry x="-0.8448" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1390" y="390"/>
@@ -737,7 +737,7 @@
                         <mxPoint y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-15" value="Publish event&#xa;XPGained, LevelUp&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="5NzJgPJ_U4Y8JTrqzSEt-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-15" value="Publish event&#xa;XPGained, LevelUp&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="5NzJgPJ_U4Y8JTrqzSEt-0" edge="1">
                     <mxGeometry x="-0.8641" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1530" y="800"/>
@@ -748,7 +748,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-16" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="-rbyiXTFLoeHZAbIUAtH-2">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-16" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-6" target="-rbyiXTFLoeHZAbIUAtH-2" edge="1">
                     <mxGeometry x="-0.5349" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1440" y="450"/>
@@ -760,7 +760,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-17" value="Read/Write achievements using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-17" value="Read/Write achievements using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.344" y="30" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2430" y="1220"/>
@@ -770,7 +770,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-18" value="Publish event&#xa;AchievementUnlocked&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="5NzJgPJ_U4Y8JTrqzSEt-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-18" value="Publish event&#xa;AchievementUnlocked&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="5NzJgPJ_U4Y8JTrqzSEt-0" edge="1">
                     <mxGeometry x="-0.9289" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2370" y="1420"/>
@@ -780,7 +780,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-19" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.75;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="-rbyiXTFLoeHZAbIUAtH-2">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-19" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.75;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="-rbyiXTFLoeHZAbIUAtH-2" edge="1">
                     <mxGeometry x="-0.8049" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2240" y="420"/>
@@ -792,7 +792,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-20" value="Send achievement notification to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="f8cN0QI5C-KuwWT-lk3n-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-20" value="Send achievement notification to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-1" target="f8cN0QI5C-KuwWT-lk3n-0" edge="1">
                     <mxGeometry x="-0.8779" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2600" y="420"/>
@@ -803,7 +803,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-21" value="Read/Write streaks using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-21" value="Read/Write streaks using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.2917" y="20" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1170" y="1070"/>
@@ -814,7 +814,7 @@
                         <mxPoint y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-22" value="Publish event&#xa;StreakMilestone&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.004;entryY=0.917;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="5NzJgPJ_U4Y8JTrqzSEt-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-22" value="Publish event&#xa;StreakMilestone&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.004;entryY=0.917;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="5NzJgPJ_U4Y8JTrqzSEt-0" edge="1">
                     <mxGeometry x="-0.8925" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1230" y="630"/>
@@ -825,7 +825,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-23" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.25;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="-rbyiXTFLoeHZAbIUAtH-2">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-23" value="Use utilities from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.25;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="-rbyiXTFLoeHZAbIUAtH-2" edge="1">
                     <mxGeometry x="-0.7143" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="900" y="420"/>
@@ -835,7 +835,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-24" value="Send reminders to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="f8cN0QI5C-KuwWT-lk3n-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-24" value="Send reminders to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-4" target="f8cN0QI5C-KuwWT-lk3n-0" edge="1">
                     <mxGeometry x="-0.9206" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1110" y="540"/>
@@ -846,7 +846,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-25" value="Read/Write transactions using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.166;exitY=0.989;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.167;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-25" value="Read/Write transactions using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.166;exitY=0.989;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.167;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.4396" y="10" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="670" y="1100"/>
@@ -857,7 +857,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-26" value="Publish event&#xa;RewardGranted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.249;entryY=0.992;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="5NzJgPJ_U4Y8JTrqzSEt-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-26" value="Publish event&#xa;RewardGranted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.249;entryY=0.992;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="5NzJgPJ_U4Y8JTrqzSEt-0" edge="1">
                     <mxGeometry x="-0.8182" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="550" y="420"/>
@@ -868,7 +868,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-27" value="Use calculators from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0.832;exitY=0.982;entryX=0;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="-rbyiXTFLoeHZAbIUAtH-2">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-27" value="Use calculators from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0.832;exitY=0.982;entryX=0;entryY=0.25;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="-rbyiXTFLoeHZAbIUAtH-2" edge="1">
                     <mxGeometry x="-0.7119" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="830" y="830"/>
@@ -878,7 +878,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-28" value="Read/Write challenges using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-28" value="Read/Write challenges using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.5283" y="-20" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="270" y="1130"/>
@@ -890,7 +890,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-29" value="Publish event&#xa;ChallengeCompleted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="5NzJgPJ_U4Y8JTrqzSEt-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-29" value="Publish event&#xa;ChallengeCompleted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="5NzJgPJ_U4Y8JTrqzSEt-0" edge="1">
                     <mxGeometry x="-0.8914" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="330" y="1420"/>
@@ -900,7 +900,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-30" value="Check rankings at&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.792;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="-rbyiXTFLoeHZAbIUAtH-5">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-30" value="Check rankings at&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.792;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="-rbyiXTFLoeHZAbIUAtH-5" edge="1">
                     <mxGeometry x="-0.8065" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="390" y="240"/>
@@ -911,7 +911,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-31" value="Use validators from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="-rbyiXTFLoeHZAbIUAtH-2">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-31" value="Use validators from&#xa;[Python import]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-0" target="-rbyiXTFLoeHZAbIUAtH-2" edge="1">
                     <mxGeometry x="-0.8837" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="390" y="890"/>
@@ -921,7 +921,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-32" value="Read/Write ranking using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.834;entryY=0.032;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="GRRekFnaJAP3enUyvQDK-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-32" value="Read/Write ranking using&#xa;[Django ORM]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;entryX=0.834;entryY=0.032;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="GRRekFnaJAP3enUyvQDK-0" edge="1">
                     <mxGeometry x="-0.8105" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2070" y="1070"/>
@@ -932,7 +932,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-33" value="Cache leaderboards in&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=0;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="CoZUd1VCx1SM3nCAQ--e-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-33" value="Cache leaderboards in&#xa;[Redis Protocol]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=0;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="CoZUd1VCx1SM3nCAQ--e-0" edge="1">
                     <mxGeometry x="-0.8889" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1950" y="280"/>
@@ -944,14 +944,14 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-34" value="Check users&#39; XP in&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.25;entryX=1;entryY=0.25;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="-rbyiXTFLoeHZAbIUAtH-6">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-34" value="Check users&#39; XP in&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.25;entryX=1;entryY=0.25;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-5" target="-rbyiXTFLoeHZAbIUAtH-6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="2086" y="1161.9999999999998" as="sourcePoint"/>
                         <mxPoint x="1855" y="1353.04" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-35" value="Delivery events&#xa;TaskCompleted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.252;exitY=0.012;entryX=0.75;entryY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-35" value="Delivery events&#xa;TaskCompleted&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0.252;exitY=0.012;entryX=0.75;entryY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7" edge="1">
                     <mxGeometry x="0.8879" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1620" y="1390"/>
@@ -963,7 +963,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-36" value="Delivery events&#xa;LevelUp&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.25;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-36" value="Delivery events&#xa;LevelUp&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;entryX=0.25;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7" edge="1">
                     <mxGeometry x="0.8742" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1440" y="1040"/>
@@ -974,7 +974,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-37" value="Delivery events&#xa;StreakMilestone&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=-0.006;exitY=0.087;entryX=0;entryY=0.25;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-37" value="Delivery events&#xa;StreakMilestone&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=-0.006;exitY=0.087;entryX=0;entryY=0.25;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7" edge="1">
                     <mxGeometry x="0.7258" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1480" y="830"/>
@@ -984,7 +984,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-38" value="Delivery events&#xa;AchievementUnlocked&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-38" value="Delivery events&#xa;AchievementUnlocked&#xa;[AMQP]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="-rbyiXTFLoeHZAbIUAtH-7" edge="1">
                     <mxGeometry x="0.7403" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1380" y="970"/>
@@ -995,7 +995,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-39" value="Grants XP using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-6">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-39" value="Grants XP using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.75;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-6" edge="1">
                     <mxGeometry x="0.4468" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1800" y="450"/>
@@ -1005,7 +1005,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-40" value="Update reward using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-4">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-40" value="Update reward using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=0;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-4" edge="1">
                     <mxGeometry x="0.6214" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1740" y="720"/>
@@ -1017,7 +1017,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-41" value="Verify achievements using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.25;entryX=0.75;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-1">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-41" value="Verify achievements using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.25;entryX=0.75;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-1" edge="1">
                     <mxGeometry x="-0.4783" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2490" y="830"/>
@@ -1027,7 +1027,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-42" value="Grants rewards using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-2" target="-rbyiXTFLoeHZAbIUAtH-3">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-42" value="Grants rewards using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.5;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-2" target="-rbyiXTFLoeHZAbIUAtH-3" edge="1">
                     <mxGeometry x="0.4894" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="750" y="860"/>
@@ -1037,7 +1037,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-43" value="Updates rankings using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.25;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-5">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-43" value="Updates rankings using&#xa;[Python call]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.25;entryY=1;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="-rbyiXTFLoeHZAbIUAtH-5" edge="1">
                     <mxGeometry x="0.7436" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1860" y="710"/>
@@ -1048,7 +1048,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vVPmqPyUFruMwmBr4LKg-44" value="Send notifications to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="f8cN0QI5C-KuwWT-lk3n-0">
+                <mxCell id="vVPmqPyUFruMwmBr4LKg-44" value="Send notifications to&#xa;[HTTP/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-7" target="f8cN0QI5C-KuwWT-lk3n-0" edge="1">
                     <mxGeometry x="-0.8929" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2100" y="890"/>
@@ -1060,71 +1060,71 @@
                     </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="Redis Cache" c4Type="Container" c4Technology="Redis Cluster" c4Description="Distributed cache for sessions, rankings, and frequent data" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="CoZUd1VCx1SM3nCAQ--e-0">
-                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="840" y="1160" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Gamification Database" c4Type="Container" c4Technology="PostgreSQL" c4Description="Stores XP, achievements, tasks, streaks,&#xa;rewards, and statistics" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="GRRekFnaJAP3enUyvQDK-0">
-                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1680" y="1160" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Notification Service" c4Type="Container" c4Technology="UV, Python, Celery" c4Description="Processes and send push notifications, emails, SMS messages, and reminders" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="f8cN0QI5C-KuwWT-lk3n-0">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1260" y="1560" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Message Queue" c4Type="Container" c4Technology="RabbitMQ/Redis" c4Description="Message queue for asynchronous events between services" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%:&amp;nbsp;%c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="5NzJgPJ_U4Y8JTrqzSEt-0">
-                    <mxCell style="shape=cylinder3;size=15;direction=south;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="shape=cylinder3;size=15;direction=south;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=12;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];resizable=0;" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1260" y="1360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Challenges Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Models" c4Description="Manages challenges and competitions.&#xa;Create, track, and complete challenges" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-0">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="210" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Achievements Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Models" c4Description="Manages the achievement system.&#xa;Evaluate criteria and unlock achievements" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-1">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="2310" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Rewards Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Model" c4Description="Manages rewards and coins.&#xa;Processes transactions and balance" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-3">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="630" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Streaks Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Model" c4Description="Manages the streak system.&#xa;Daily streak tracking" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-4">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1050" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Rankings Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Model, Cache Manager" c4Description="Manages leaderboards.&#xa;Calculates and updates rankings" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-5">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1890" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="XP Management Component" c4Type="Component" c4Technology="ViewSet, Serializer, Service, Model" c4Description="Manages the experience system.&#xa;Calculates XP, levels, multipliers" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-6">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1470" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Events Handling Component" c4Type="Component" c4Technology="Event Handlers, Event Publishers" c4Description="Processes domain events.&#xa;Orchestrates reactions to events" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-7">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1680" y="800" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Rewards Service" c4Type="External System: Tillo" c4Description="Gift card rewards service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="VD84Cy_6nV-D5kKVjIw--0">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="2730" y="360" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Core Component" c4Type="Component" c4Technology="Validators, Calculators, Config, Logger" c4Description="Shared utilities.&#xa;Common auxiliary functions" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="-rbyiXTFLoeHZAbIUAtH-2">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontColor=#ffffff;align=center;arcSize=6;strokeColor=#2086C9;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="840" y="800" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="rPFj6SmyLf0JTzUMUzHb-2" value="Claim rewards&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="VD84Cy_6nV-D5kKVjIw--0">
+                <mxCell id="rPFj6SmyLf0JTzUMUzHb-2" value="Claim rewards&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="-rbyiXTFLoeHZAbIUAtH-3" target="VD84Cy_6nV-D5kKVjIw--0" edge="1">
                     <mxGeometry x="-0.7957" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="810" y="320"/>
@@ -1135,7 +1135,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="3hCf6WfB2tak4wr0F5O1-0" value="Deliver events to&#xa;[AMQP]" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="f8cN0QI5C-KuwWT-lk3n-0">
+                <mxCell id="3hCf6WfB2tak4wr0F5O1-0" value="Deliver events to&#xa;[AMQP]" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="5NzJgPJ_U4Y8JTrqzSEt-0" target="f8cN0QI5C-KuwWT-lk3n-0" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1720" y="1520" as="sourcePoint"/>
@@ -1144,21 +1144,21 @@
                     </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="Push Notification Provider" c4Type="External System: Firebase, APNS" c4Description="Mobile device notification system" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="6272-Lecz7xElDxEyEvR-0">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="915" y="1760" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Email Service" c4Type="External System: SendGrid, AWS SES" c4Description="Mailing system" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="6272-Lecz7xElDxEyEvR-1">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1260" y="1760" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="SMS Service" c4Type="External System: Twilio, WhatsApp API" c4Description="Messenger service" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="6272-Lecz7xElDxEyEvR-2">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1605" y="1760" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="XPVHq9nZinFco3m0fcz6-0" value="Send emails&#xa;[SMTP/HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-1">
+                <mxCell id="XPVHq9nZinFco3m0fcz6-0" value="Send emails&#xa;[SMTP/HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-1" edge="1">
                     <mxGeometry x="0.25" relative="1" as="geometry">
                         <Array as="points"/>
                         <mxPoint x="1440" y="1760" as="sourcePoint"/>
@@ -1166,7 +1166,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="3MF1pxK9lrA6sZusbMVs-0" value="Send notifications&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-0">
+                <mxCell id="3MF1pxK9lrA6sZusbMVs-0" value="Send notifications&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-0" edge="1">
                     <mxGeometry x="0.8209" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1035" y="1650"/>
@@ -1176,7 +1176,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="LWUyQHUIUZzBrH9DI6Zs-0" value="Send SMS&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-2">
+                <mxCell id="LWUyQHUIUZzBrH9DI6Zs-0" value="Send SMS&#xa;[HTTPS]" style="curved=0;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="f8cN0QI5C-KuwWT-lk3n-0" target="6272-Lecz7xElDxEyEvR-2" edge="1">
                     <mxGeometry x="0.8209" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1725" y="1650"/>
@@ -1187,11 +1187,11 @@
                     </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="API Gateway" c4Type="Container" c4Technology="UV, Python, FastAPI, Redis" c4Description="Performs parameter validations, along with&#xa;the discovery of the service to be used.&#xa;It also handles authentication, authorization,&#xa;limitations, dynamic routing, and caching" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="wB15gIG5DzE-iOazXg28-0">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="BPq8q6HqY7CyKOnif9jm-1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" parent="BPq8q6HqY7CyKOnif9jm-1" vertex="1">
                         <mxGeometry x="1260" y="-50" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-0" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.25;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-0">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-0" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.25;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-0" edge="1">
                     <mxGeometry x="0.2824" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="330" y="-20"/>
@@ -1201,7 +1201,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-1" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-3">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-1" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="750" y="40"/>
@@ -1210,7 +1210,7 @@
                         <mxPoint x="750" y="150" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-2" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-4">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-2" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.25;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-4" edge="1">
                     <mxGeometry x="0.0909" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1320" y="120"/>
@@ -1221,7 +1221,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-3" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-6">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-3" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=0.75;exitY=1;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-6" edge="1">
                     <mxGeometry x="0.0909" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1440" y="120"/>
@@ -1232,7 +1232,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-4" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-5">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-4" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.75;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-5" edge="1">
                     <mxGeometry x="-0.012" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2010" y="40"/>
@@ -1242,7 +1242,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="-3sSfXMSl1-IRn1vTOBk-5" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.25;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-1">
+                <mxCell id="-3sSfXMSl1-IRn1vTOBk-5" value="Route requests to&#xa;[HTTPS/REST]" style="curved=0;startArrow=none;endArrow=block;exitX=1;exitY=0.25;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="BPq8q6HqY7CyKOnif9jm-1" source="wB15gIG5DzE-iOazXg28-0" target="-rbyiXTFLoeHZAbIUAtH-1" edge="1">
                     <mxGeometry x="0.2824" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2430" y="-20"/>
@@ -1256,7 +1256,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="axEBqz8W2UzuQO95erH4" name="C4 - Code">
-        <mxGraphModel dx="3570" dy="2623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1530" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1781,7 +1781,7 @@
                         <mxPoint x="1625.5" y="865.9999999999998" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="1NIKRPYNoFSfZPZeycHY-187" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;exitX=0;exitY=0.88;entryX=0.22;entryY=0;rounded=0;dashed=1;dashPattern=8 8;fontSize=14;" parent="1" source="1NIKRPYNoFSfZPZeycHY-1" target="1NIKRPYNoFSfZPZeycHY-12" edge="1">
+                <mxCell id="1NIKRPYNoFSfZPZeycHY-187" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;exitX=0;exitY=0.88;entryX=0.22;entryY=0;rounded=0;fontSize=14;" parent="1" source="1NIKRPYNoFSfZPZeycHY-1" target="1NIKRPYNoFSfZPZeycHY-12" edge="1">
                     <mxGeometry x="0.0008" relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="200" y="334"/>
@@ -1791,7 +1791,7 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="1NIKRPYNoFSfZPZeycHY-188" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;exitX=0.33;exitY=1;entryX=0.5;entryY=0;rounded=0;dashed=1;dashPattern=8 8;fontSize=14;" parent="1" source="1NIKRPYNoFSfZPZeycHY-1" target="1NIKRPYNoFSfZPZeycHY-24" edge="1">
+                <mxCell id="1NIKRPYNoFSfZPZeycHY-188" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;exitX=0.33;exitY=1;entryX=0.5;entryY=0;rounded=0;fontSize=14;" parent="1" source="1NIKRPYNoFSfZPZeycHY-1" target="1NIKRPYNoFSfZPZeycHY-24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="622" y="410"/>
@@ -1799,7 +1799,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="1NIKRPYNoFSfZPZeycHY-189" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;entryX=0.5;entryY=0;rounded=0;exitX=0.655;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;fontSize=14;dashed=1;dashPattern=8 8;" parent="1" source="1NIKRPYNoFSfZPZeycHY-11" target="1NIKRPYNoFSfZPZeycHY-33" edge="1">
+                <mxCell id="1NIKRPYNoFSfZPZeycHY-189" value="uses" style="curved=0;startArrow=none;endArrow=open;endSize=12;entryX=0.5;entryY=0;rounded=0;exitX=0.655;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;fontSize=14;" parent="1" source="1NIKRPYNoFSfZPZeycHY-11" target="1NIKRPYNoFSfZPZeycHY-33" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="733" y="410"/>
