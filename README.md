@@ -71,6 +71,28 @@ python manage.py create_sample_achievements
 python manage.py create_test_user_stats --user-id 1
 ```
 
+### 7. 🎮 Ejecutar Demo Interactiva (Flask)
+
+Para probar el sistema de logros con una interfaz visual:
+
+```bash
+# Terminal 1: Iniciar Django (puerto 8000)
+cd src
+uv run python manage.py runserver
+
+# Terminal 2: Iniciar Flask Demo (puerto 5000)
+cd src
+uv run python demo_app.py
+
+# O usar el script de inicio rápido en Windows:
+cd src
+start_demo.bat
+```
+
+Luego abre en tu navegador: **http://localhost:5000**
+
+📖 **Ver documentación completa de la demo**: [DEMO_README.md](./src/DEMO_README.md)
+
 ## 📋 Estructura de Archivos Implementados
 
 ```

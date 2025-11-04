@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify - Demo de Sistema de Logros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .achievement-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .achievement-unlocked {
+            border: 3px solid #28a745;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .achievement-locked {
+            opacity: 0.7;
+            background: #f8f9fa;
+        }
+        .rarity-common { border-left: 5px solid #6c757d; }
+        .rarity-rare { border-left: 5px solid #0dcaf0; }
+        .rarity-epic { border-left: 5px solid #6f42c1; }
+        .rarity-legendary { border-left: 5px solid #ffc107; }
+        .stat-card {
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stat-card i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .bg-gradient-blue { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .bg-gradient-green { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); }
+        .bg-gradient-orange { background: linear-gradient(135deg, #f83600 0%, #f9d423 100%); }
+        .bg-gradient-purple { background: linear-gradient(135deg, #a8caba 0%, #5d4157 100%); }
+        .progress {
+            height: 25px;
+            border-radius: 10px;
+        }
+        .badge-rarity {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .control-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .btn-action {
+            border-radius: 25px;
+            padding: 10px 30px;
+            font-weight: 600;
+        }
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Toast Container para notificaciones -->
+    <div class="toast-container"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12 text-center text-white">
+                <h1 class="display-4 fw-bold mb-2">
+                    <i class="bi bi-trophy-fill"></i> Gamify Achievement System
+                </h1>
+                <p class="lead">Demo del Sistema de Desbloqueo de Logros</p>
+                <span class="badge bg-light text-dark">Usuario: Superuser (ID: 1)</span>
+            </div>
+        </div>
+
+        <!-- Estadísticas del Usuario -->
+        <div class="row mb-4" id="stats-container">
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-gradient-blue">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <h3 class="mb-0" id="stat-tasks">0</h3>
+                    <p class="mb-0">Tareas Completadas</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-gradient-green">
+                    <i class="bi bi-fire"></i>
+                    <h3 class="mb-0" id="stat-streak">0</h3>
+                    <p class="mb-0">Racha Actual</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-gradient-orange">
+                    <i class="bi bi-trophy"></i>
+                    <h3 class="mb-0" id="stat-achievements">0</h3>
+                    <p class="mb-0">Logros Desbloqueados</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-gradient-purple">
+                    <i class="bi bi-star-fill"></i>
+                    <h3 class="mb-0" id="stat-xp">0</h3>
+                    <p class="mb-0">XP Total</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de Control -->
+        <div class="control-panel">
+            <h4 class="mb-3"><i class="bi bi-gear-fill"></i> Panel de Control - Demo</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Simular Completación de Tareas</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="task-count" value="1" min="1" max="100">
+                        <button class="btn btn-primary btn-action" onclick="simulateTasks()">
+                            <i class="bi bi-play-fill"></i> Completar Tareas
+                        </button>
+                    </div>
+                    <small class="text-muted">Ingresa cuántas tareas quieres simular (ej: 1, 10, 100)</small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold">Acciones</label>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-success btn-action flex-fill" onclick="loadData()">
+                            <i class="bi bi-arrow-clockwise"></i> Recargar Datos
+                        </button>
+                        <button class="btn btn-info btn-action flex-fill" onclick="showAllProgress()">
+                            <i class="bi bi-list-check"></i> Ver Progreso
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="control-panel">
+            <h5><i class="bi bi-funnel-fill"></i> Filtros</h5>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary" onclick="filterAchievements('all')">
+                    Todos
+                </button>
+                <button type="button" class="btn btn-outline-success" onclick="filterAchievements('unlocked')">
+                    Desbloqueados
+                </button>
+                <button type="button" class="btn btn-outline-secondary" onclick="filterAchievements('locked')">
+                    Bloqueados
+                </button>
+            </div>
+        </div>
+
+        <!-- Lista de Logros -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="text-white mb-3"><i class="bi bi-trophy"></i> Logros Disponibles</h3>
+                <div id="achievements-container" class="row">
+                    <div class="col-12 text-center text-white">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                        <p>Cargando logros...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let allAchievements = [];
+        let currentFilter = 'all';
+
+        // Cargar datos al iniciar
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+        });
+
+        // Función para mostrar notificaciones
+        function showToast(message, type = 'success') {
+            const toastHtml = `
+                <div class="toast align-items-center text-white bg-${type} border-0" role="alert">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="bi bi-${type === 'success' ? 'check-circle-fill' : 'exclamation-triangle-fill'}"></i>
+                            ${message}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            `;
+            const container = document.querySelector('.toast-container');
+            container.insertAdjacentHTML('beforeend', toastHtml);
+            const toastElement = container.lastElementChild;
+            const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+            toast.show();
+            toastElement.addEventListener('hidden.bs.toast', () => toastElement.remove());
+        }
+
+        // Cargar todos los datos
+        async function loadData() {
+            try {
+                showToast('Cargando datos...', 'info');
+                await Promise.all([
+                    loadAchievements(),
+                    loadUserStats()
+                ]);
+                showToast('Datos cargados correctamente', 'success');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showToast('Error al cargar datos', 'danger');
+            }
+        }
+
+        // Cargar estadísticas del usuario
+        async function loadUserStats() {
+            try {
+                const response = await fetch('/api/user-stats');
+                const stats = await response.json();
+
+                document.getElementById('stat-tasks').textContent = stats.tasks_completed || 0;
+                document.getElementById('stat-streak').textContent = stats.current_streak || 0;
+                document.getElementById('stat-achievements').textContent = stats.achievements_unlocked || 0;
+                document.getElementById('stat-xp').textContent = stats.total_xp || 0;
+            } catch (error) {
+                console.error('Error loading user stats:', error);
+            }
+        }
+
+        // Cargar logros con progreso
+        async function loadAchievements() {
+            try {
+                const response = await fetch('/api/user-achievements');
+                const data = await response.json();
+
+                allAchievements = data.results || data || [];
+                displayAchievements();
+            } catch (error) {
+                console.error('Error loading achievements:', error);
+                document.getElementById('achievements-container').innerHTML = `
+                    <div class="col-12 text-center text-white">
+                        <i class="bi bi-exclamation-triangle-fill" style="font-size: 3rem;"></i>
+                        <p>Error al cargar logros. Asegúrate de que Django esté corriendo en http://localhost:8000</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Mostrar logros filtrados
+        function displayAchievements() {
+            const container = document.getElementById('achievements-container');
+
+            let filtered = allAchievements;
+            if (currentFilter === 'unlocked') {
+                filtered = allAchievements.filter(a => a.is_unlocked);
+            } else if (currentFilter === 'locked') {
+                filtered = allAchievements.filter(a => !a.is_unlocked);
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center text-white">
+                        <i class="bi bi-inbox" style="font-size: 3rem;"></i>
+                        <p>No hay logros en esta categoría</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map(achievement => {
+                const isUnlocked = achievement.is_unlocked;
+                const progress = achievement.progress || 0;
+                const target = achievement.criteria?.target || 100;
+                const progressPercent = Math.min((progress / target) * 100, 100);
+
+                const rarityColors = {
+                    'common': 'secondary',
+                    'rare': 'info',
+                    'epic': 'primary',
+                    'legendary': 'warning'
+                };
+
+                const rarityColor = rarityColors[achievement.rarity] || 'secondary';
+
+                return `
+                    <div class="col-md-6 col-lg-4 mb-4 achievement-item" data-unlocked="${isUnlocked}">
+                        <div class="card achievement-card ${isUnlocked ? 'achievement-unlocked' : 'achievement-locked'} rarity-${achievement.rarity} h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">
+                                        ${isUnlocked ? '<i class="bi bi-check-circle-fill text-success"></i>' : '<i class="bi bi-lock-fill text-secondary"></i>'}
+                                        ${achievement.name}
+                                    </h5>
+                                    <span class="badge badge-rarity bg-${rarityColor}">${achievement.rarity.toUpperCase()}</span>
+                                </div>
+                                <p class="card-text text-muted">${achievement.description}</p>
+
+                                <div class="mb-3">
+                                    <div class="progress">
+                                        <div class="progress-bar ${isUnlocked ? 'bg-success' : 'bg-primary'}"
+                                             role="progressbar"
+                                             style="width: ${progressPercent}%"
+                                             aria-valuenow="${progress}"
+                                             aria-valuemin="0"
+                                             aria-valuemax="${target}">
+                                            ${progress}/${target}
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">${progressPercent.toFixed(0)}% completado</small>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="badge bg-info"><i class="bi bi-star-fill"></i> ${achievement.reward_xp} XP</span>
+                                        <span class="badge bg-warning"><i class="bi bi-coin"></i> ${achievement.reward_coins} coins</span>
+                                    </div>
+                                    ${!isUnlocked ? `
+                                        <button class="btn btn-sm btn-outline-primary" onclick="unlockAchievement('${achievement.id}')">
+                                            <i class="bi bi-unlock-fill"></i> Desbloquear
+                                        </button>
+                                    ` : `
+                                        <small class="text-success"><i class="bi bi-check-lg"></i> Completado</small>
+                                    `}
+                                </div>
+
+                                ${isUnlocked && achievement.unlocked_at ? `
+                                    <div class="mt-2">
+                                        <small class="text-muted">
+                                            <i class="bi bi-calendar-check"></i>
+                                            Desbloqueado: ${new Date(achievement.unlocked_at).toLocaleDateString('es-ES')}
+                                        </small>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filtrar logros
+        function filterAchievements(filter) {
+            currentFilter = filter;
+            displayAchievements();
+
+            // Actualizar botones activos
+            document.querySelectorAll('.btn-group .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Simular tareas
+        async function simulateTasks() {
+            const count = parseInt(document.getElementById('task-count').value);
+            if (count < 1 || count > 100) {
+                showToast('Ingresa un número entre 1 y 100', 'warning');
+                return;
+            }
+
+            try {
+                showToast(`Simulando ${count} tareas...`, 'info');
+
+                const response = await fetch('/api/simulate-task', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ count: count })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showToast(`¡${count} tareas completadas! Revisa los logros actualizados`, 'success');
+
+                    // Recargar datos después de 1 segundo
+                    setTimeout(() => loadData(), 1000);
+                } else {
+                    showToast('Error al simular tareas', 'danger');
+                }
+            } catch (error) {
+                console.error('Error simulating tasks:', error);
+                showToast('Error al simular tareas', 'danger');
+            }
+        }
+
+        // Desbloquear logro manualmente
+        async function unlockAchievement(achievementId) {
+            if (!confirm('¿Desbloquear este logro manualmente?')) {
+                return;
+            }
+
+            try {
+                showToast('Desbloqueando logro...', 'info');
+
+                const response = await fetch('/api/unlock-achievement', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ achievement_id: achievementId })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showToast('¡Logro desbloqueado!', 'success');
+                    setTimeout(() => loadData(), 500);
+                } else {
+                    showToast('Error al desbloquear logro', 'danger');
+                }
+            } catch (error) {
+                console.error('Error unlocking achievement:', error);
+                showToast('Error al desbloquear logro', 'danger');
+            }
+        }
+
+        // Mostrar progreso completo
+        function showAllProgress() {
+            const modal = new bootstrap.Modal(document.createElement('div'));
+            // Simplemente recargamos los datos
+            loadData();
+            showToast('Mostrando progreso actualizado', 'info');
+        }
+    </script>
+</body>
+</html>
