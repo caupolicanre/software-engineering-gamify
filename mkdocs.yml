@@ -9,18 +9,45 @@ copyright: Maintained by Caupolicán Ré - Felipe Carrozzo.
 
 nav:
   - Home: index.md
+  - Documentación:
+      - Visión general: README.md
+      - Guía de despliegue: DEPLOYMENT_GUIDE.md
+  - Diseño:
+      - Visión general: design/README.md
+      - Documentación completa de diseño: design/design_documentation.md
+  - Trabajos Prácticos:
+      - TP1 Parte 1 - Arquitectura: practical_work/TP1_part1_architecture.md
+      - TP1 Parte 2 - Aplicación de arquitectura: practical_work/TP1_part2_apply_architecture.md
+      - TP2 - Diagramas de secuencia: practical_work/TP2_sequence_diagram.md
+      - TP3 - Diagramas de clases y despliegue: practical_work/TP3_class_deployment_diagrams.md
+  - Requerimientos:
+      - Visión general: requirements/README.md
+  - Especificaciones:
+      - Visión general: specifications/README.md
+  - Configuración:
+      - Inventario de CIs: CI_INVENTORY.md
+
 plugins:
   - search
   - mkdocstrings:
       handlers:
         python:
           paths: [
-            "gamify"
+            "src"
             ]
 theme:
   name: material
-  feature:
-    tabs: true
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: es
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -28,14 +55,14 @@ theme:
       accent: deep orange
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Cambiar a modo oscuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: deep orange
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Cambiar a modo claro
   icon:
     repo: fontawesome/brands/github
 
@@ -43,9 +70,24 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/caupolicanre/gamify
+  generator: false
 
 markdown_extensions:
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - attr_list
+  - md_in_html
