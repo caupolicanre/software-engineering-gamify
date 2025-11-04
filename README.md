@@ -13,7 +13,7 @@
 ## Contenido principal del repositorio
 - [Documentación](./docs/)
 - [Código fuente](./src/)
-- [Pruebas](./tests/)
+- [Pruebas](./src/apps/achievements/tests/)
 - [Recursos](./resources/)
 
 ## Equipo
