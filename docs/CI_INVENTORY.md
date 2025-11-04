@@ -3,9 +3,9 @@
 Este módulo centraliza el **inventario de activos (Configuration Items, CIs)** que forman parte del proyecto.
 
 ## Resumen
-- **Total de CIs:** 17
-- **Versión del inventario:** 2.1.0
-- **Fecha de inventario:** 2025-11-03
+- **Total de CIs:** 18
+- **Versión del inventario:** 2.2.0
+- **Fecha de inventario:** 2025-11-04
 - **Responsable:** Equipo Gamify ([Caupolicán Ré](https://github.com/caupolicanre) - [Felipe Carrozzo](https://github.com/felipecarrozzo))
 
 ---
@@ -31,18 +31,19 @@ Este módulo centraliza el **inventario de activos (Configuration Items, CIs)** 
 | **CI-015** | [TP3: Diagramas de clases y despliegue](./practical_work/TP3_class_deployment_diagrams.md) | `.md` | Documentación | 1.0.0 | [`/docs/practical_work`](./practical_work/) | [@caupolicanre](https://github.com/caupolicanre) [@felipecarrozzo](https://github.com/felipecarrozzo) | **Alta** | Diagramas de clases detallados, diagrama de despliegue y trazabilidad. | 2025-11-03 |
 | **CI-016** | [Documentación de desarrollo de contenidos](./specifications/TP_final_IS_1.pdf) | `.pdf` | Documentación | 1.0.0 | [`/docs/specifications`](./specifications/) | [@caupolicanre](https://github.com/caupolicanre) | **Baja** | Permite rastrear recursos auxiliares del proyecto. | 2025-11-03 |
 | **CI-017** | [Configuración del proyecto](../pyproject.toml) | `.toml` | Configuración | 1.0.0 | Raíz del proyecto | [@caupolicanre](https://github.com/caupolicanre) | **Alta** | Configuración de dependencias y herramientas del proyecto. | 2025-11-03 |
+| **CI-018** | [Trabajo Práctico Final IS2](../resources/IS2_TP_Final.pdf) | `.pdf` | Documentación | 1.0.0 | [`/resources`](../resources/) | [@caupolicanre](https://github.com/caupolicanre) [@felipecarrozzo](https://github.com/felipecarrozzo) | **Alta** | Trabajo práctico final de Ingeniería de Software 2 con todas las entregas consolidadas. | 2025-11-04 |
 
 ---
 
 ## Estadísticas por Categoría
 - **Diseño:** 9 CIs
-- **Documentación:** 7 CIs
+- **Documentación:** 8 CIs
 - **Configuración:** 1 CI
 
 ---
 
 ## Estadísticas por Criticidad
-- **Criticidad Alta:** 13 CIs
+- **Criticidad Alta:** 14 CIs
 - **Criticidad Media:** 3 CIs
 - **Criticidad Baja:** 1 CI
 

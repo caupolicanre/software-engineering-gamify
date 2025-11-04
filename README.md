@@ -15,6 +15,7 @@
 - [Código fuente](./src/)
 - [Pruebas](./src/apps/achievements/tests/)
 - [Recursos](./resources/)
+- [Trabajo Práctico Final](./resources/IS2_TP_Final.pdf)
 
 ## Equipo
 - [Caupolicán Ré](https://github.com/caupolicanre) - Responsable del repositorio

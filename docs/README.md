@@ -15,6 +15,7 @@ La documentación de Gamify está organizada en varios módulos principales, cad
   - [TP1 Parte 2: Aplicación de arquitectura](./practical_work/TP1_part2_apply_architecture.md)
   - [TP2: Diagramas de secuencia](./practical_work/TP2_sequence_diagram.md)
   - [TP3: Diagramas de clases y despliegue](./practical_work/TP3_class_deployment_diagrams.md)
+  - [**Trabajo Práctico Final**](../resources/IS2_TP_Final.pdf)
 
 ## Guías
 

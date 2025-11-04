@@ -15,3 +15,4 @@ Gamify es una aplicación **web y móvil** que permite organizar tareas, exámen
 
 - [Documentación general](./README.md)
 - [Repositorio en GitHub](https://github.com/caupolicanre/gamify)
+- [Trabajo Práctico Final](../resources/IS2_TP_Final.pdf)
