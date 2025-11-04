@@ -2,7 +2,7 @@
 
 /* General Layout */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #314066 0%, #190f38 100%);
     min-height: 100vh;
     padding: 20px 0;
 }
@@ -82,6 +82,34 @@ body {
 .progress {
     height: 25px;
     border-radius: 10px;
+    position: relative;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    color: #212529;
+    text-shadow:
+        -1px -1px 0 rgba(255,255,255,0.8),
+         1px -1px 0 rgba(255,255,255,0.8),
+        -1px  1px 0 rgba(255,255,255,0.8),
+         1px  1px 0 rgba(255,255,255,0.8);
 }
 
 /* Badges */

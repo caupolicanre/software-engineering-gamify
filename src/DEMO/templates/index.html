@@ -45,7 +45,6 @@
                     <i class="bi bi-graph-up-arrow"></i>
                     <h3 class="mb-0">
                         <span id="stat-level">1</span>
-                        <small class="text-muted" style="font-size: 0.5em;">(XP: <span id="stat-xp">0</span>)</small>
                     </h3>
                     <p class="mb-0">Nivel</p>
                 </div>
@@ -76,11 +75,8 @@
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-bold">Acciones</label>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-success btn-action flex-fill" onclick="loadData()">
+                        <button class="btn btn-success btn-action w-100" onclick="loadData()">
                             <i class="bi bi-arrow-clockwise"></i> Recargar Datos
-                        </button>
-                        <button class="btn btn-info btn-action flex-fill" onclick="showAllProgress()">
-                            <i class="bi bi-list-check"></i> Ver Progreso
                         </button>
                     </div>
                 </div>
@@ -257,8 +253,8 @@
                                              aria-valuenow="${progress}"
                                              aria-valuemin="0"
                                              aria-valuemax="${target}">
-                                            ${progress}/${target}
                                         </div>
+                                        <span class="progress-text">${progress}/${target}</span>
                                     </div>
                                     <small class="text-muted">${progressPercent.toFixed(0)}% completado</small>
                                 </div>
