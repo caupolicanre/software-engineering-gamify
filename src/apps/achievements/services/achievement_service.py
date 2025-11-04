@@ -280,10 +280,7 @@ class AchievementService:
         achievements = Achievement.objects.get_active_achievements()
 
         # Get all user achievements to check unlock status
-        user_achievements = {
-            ua.achievement_id: ua
-            for ua in UserAchievement.objects.filter(user_id=user_id)
-        }
+        user_achievements = {ua.achievement_id: ua for ua in UserAchievement.objects.filter(user_id=user_id)}
 
         result = []
 
