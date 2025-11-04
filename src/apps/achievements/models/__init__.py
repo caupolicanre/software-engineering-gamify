@@ -63,7 +63,8 @@ class Achievement(models.Model):
     objects = AchievementManager()
 
     class Meta:
-        db_table = "achievements"
+        verbose_name = "Achievement"
+        verbose_name_plural = "Achievements"
         ordering = ["-created_at"]
         indexes = [
             models.Index(fields=["criteria_type", "is_active"]),
@@ -127,7 +128,8 @@ class UserAchievement(models.Model):
     objects = UserAchievementManager()
 
     class Meta:
-        db_table = "user_achievements"
+        verbose_name = "User Achievement"
+        verbose_name_plural = "User Achievements"
         unique_together = [["user", "achievement"]]
         ordering = ["-unlocked_at", "-created_at"]
         indexes = [
@@ -162,3 +164,80 @@ class UserAchievement(models.Model):
             self.progress = 100.00
             self.unlocked_at = timezone.now()
             self.save(update_fields=["is_completed", "progress", "unlocked_at", "updated_at"])
+
+
+class UserStatistics(models.Model):
+    """
+    Aggregated statistics for a user.
+
+    Used by AchievementEvaluator to check criteria.
+
+    Attributes:
+        user: OneToOne relationship with User
+        total_tasks_completed: Total number of completed tasks
+        current_streak: Current consecutive days streak
+        longest_streak: Longest streak ever achieved
+        total_xp: Total XP accumulated
+        current_level: Current user level
+        friend_count: Number of friends
+        challenges_won: Number of challenges won
+        last_updated: Last update timestamp
+    """
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="statistics", primary_key=True)
+    total_tasks_completed = models.PositiveIntegerField(default=0)
+    current_streak = models.PositiveIntegerField(default=0)
+    longest_streak = models.PositiveIntegerField(default=0)
+    total_xp = models.PositiveIntegerField(default=0)
+    current_level = models.PositiveIntegerField(default=1)
+    friend_count = models.PositiveIntegerField(default=0)
+    challenges_won = models.PositiveIntegerField(default=0)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "User Statistic"
+        verbose_name_plural = "User Statistics"
+
+    def __str__(self) -> str:
+        """
+        Represent user statistics as a string.
+
+        Returns:
+            str: Stats summary for the user.
+        """
+        return f"Stats for {self.user} (Level {self.current_level}, {self.total_tasks_completed} tasks)"
+
+    def update_stats(self, stat_name: str, value: int) -> None:
+        """
+        Update a specific statistic.
+
+        Args:
+            stat_name: Name of the statistic field
+            value: New value
+        """
+        if hasattr(self, stat_name):
+            setattr(self, stat_name, value)
+            self.save(update_fields=[stat_name, "last_updated"])
+
+    def increment_stat(self, stat_name: str, increment: int = 1) -> None:
+        """
+        Increment a statistic by a given amount.
+
+        Args:
+            stat_name: Name of the statistic field
+            increment: Amount to increment (default: 1)
+        """
+        if hasattr(self, stat_name):
+            current_value = getattr(self, stat_name)
+            setattr(self, stat_name, current_value + increment)
+            self.save(update_fields=[stat_name, "last_updated"])
+
+    def refresh_from_sources(self) -> None:
+        """
+        Refresh statistics from source services.
+
+        This would typically call external services (XP Service, Task Service, etc.)
+        For now, it's a placeholder.
+        """
+        # TODO: Implement calls to external services
+        pass
