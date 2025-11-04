@@ -13,7 +13,8 @@ class NotificationSender:
 
     def __init__(self) -> None:
         """Initialize the NotificationSender."""
-        self.notification_service_url = settings.NOTIFICATION_SERVICE_URL
+        # TODO: Uncomment when Notification Service is ready
+        # self.notification_service_url = settings.NOTIFICATION_SERVICE_URL
 
     def send_achievement_notification(self, user_id: int, achievement_name: str, description: str) -> None:
         """
