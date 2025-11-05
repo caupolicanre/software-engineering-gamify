@@ -12,7 +12,6 @@
 
 ## Contenido principal del repositorio
 - [Documentación](./docs/)
-  - [TP4: Diseño de Casos de Prueba](./docs/practical_work/TP4_test_cases_design.md)
 - [Código fuente](./src/)
 - [Pruebas](./src/apps/achievements/tests/)
 - [Recursos](./resources/)
