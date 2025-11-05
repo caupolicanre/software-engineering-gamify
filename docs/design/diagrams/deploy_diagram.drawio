@@ -573,8 +573,8 @@
         <mxCell id="cJ9JDubIlWU3qRq0qpKA-111" value="Push logs" style="curved=0;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" target="lyQVX1wimJVp3Gw7o7B8-83">
           <mxGeometry x="-0.9746" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="5766" y="700" />
-              <mxPoint x="660" y="700" />
+              <mxPoint x="5766" y="650" />
+              <mxPoint x="660" y="650" />
             </Array>
             <mxPoint x="5766" y="969" as="sourcePoint" />
             <mxPoint x="794" y="1382.7400000000002" as="targetPoint" />
